@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roast Foods - Premium Healthy Roasted Makhana & Jowar Snacks</title>
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="media/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="media/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="media/favicon/apple-icon-180x180.png">
+  <link rel="manifest" href="media/favicon/manifest.json">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="media/css/lenis.css">
+  <link rel="stylesheet" href="media/css/style.css">
+  <!-- FontAwesome Icons for clean SVG-ready UI elements -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+
+
+  <!-- Main Header & Navigation -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" id="mainBrandLogo">
+        <img src="media/Images/logo.png" alt="Roast Foods — Roasted, Not Fried" class="brand-logo-img">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#heroSection" class="nav-link active">Home</a></li>
+        <li><a href="#promoDuoSection" class="nav-link">Superfoods</a></li>
+        <li><a href="#catalogSection" class="nav-link">Our Snacks</a></li>
+        <li><a href="#reviewsSection" class="nav-link">Reviews</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn-icon" data-cart-toggle aria-label="View Cart" id="cartHeaderBtn">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count-badge">3</span>
+        </button>
+        <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO FULL-SCREEN IMAGE BANNER (AUTOSCROLL + PAGINATION)
+       ========================================================================== -->
+  <section class="hero-banner-section full-screen-banner" id="heroSection">
+    <div class="banner-slider-wrapper">
+      <div class="banner-slides-container">
+        <div class="banner-slide active" data-index="0">
+          <a href="#catalogSection">
+            <img src="media/Images/banner1.png"
+              alt="Roast Foods — Roasted Not Fried Makhana (Himalayan Salt & Thai Sweet Chilli)" class="banner-img">
+          </a>
+        </div>
+        <div class="banner-slide" data-index="1">
+          <a href="#catalogSection">
+            <img src="media/Images/banner2.png"
+              alt="Roast Foods — Roasted Not Fried Jowar Puffs (Tomato & Indian Spices)" class="banner-img">
+          </a>
+        </div>
+        <div class="banner-slide" data-index="2">
+          <a href="#catalogSection">
+            <img src="media/Images/3.png" alt="Roast Foods — Roasted Not Fried Makhana (Peri Peri & Cheese Herbs)"
+              class="banner-img">
+          </a>
+        </div>
+      </div>
+
+      <!-- Slider Arrow Controls -->
+      <button class="banner-nav-btn prev-btn" id="prevSlide" aria-label="Previous Slide">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button class="banner-nav-btn next-btn" id="nextSlide" aria-label="Next Slide">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <!-- Minimal Pagination Dots (Floating at Bottom) -->
+      <div class="banner-pagination" id="bannerPagination">
+        <button class="pagination-dot active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="pagination-dot" data-slide="1" aria-label="Slide 2"></button>
+        <button class="pagination-dot" data-slide="2" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       DUO PROMO BANNERS (EXACT REPLICATION OF REFERENCE DESIGN)
+       ========================================================================== -->
+  <section class="promo-duo-section" id="promoDuoSection">
+    <div class="container">
+      <div class="promo-duo-grid">
+
+        <!-- Left Promo Card: Forest Green "JOIN THE CREW" -->
+        <div class="promo-card card-green">
+          <!-- Abstract Contour Waves SVG Background -->
+          <svg class="promo-contour-bg" viewBox="0 0 500 380" fill="none" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none">
+            <path d="M-50,60 Q140,180 300,50 T560,160" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1.8" />
+            <path d="M-80,160 Q80,40 240,220 T580,120" stroke="rgba(255, 255, 255, 0.12)" stroke-width="2" />
+            <path d="M-30,260 Q160,320 320,180 T560,270" stroke="rgba(255, 255, 255, 0.09)" stroke-width="1.8" />
+            <path d="M30,-10 Q200,90 350,10 T530,140" stroke="rgba(255, 255, 255, 0.11)" stroke-width="1.8" />
+            <path d="M-40,340 Q150,250 310,360 T560,280" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.6" />
+          </svg>
+
+          <div class="promo-text-wrap">
+            <h3 class="promo-hero-title">
+              MAKHANA
+            </h3>
+
+            <div class="promo-tagline">
+              YOUR CHOSEN FAMILY.<br>
+              YOUR WORLD. PEOPLE<br>
+              WHO GET YOU.
+            </div>
+          </div>
+
+          <div class="promo-img-wrap">
+            <img src="media/Images/Makhana Bg img.png" alt="Roasted Makhana Glass Bowl"
+              class="promo-photo promo-photo-bowl">
+          </div>
+        </div>
+
+        <!-- Right Promo Card: Orange "JOWAR PUFFS" -->
+        <div class="promo-card card-orange">
+          <!-- Abstract Contour Waves SVG Background -->
+          <svg class="promo-contour-bg" viewBox="0 0 500 380" fill="none" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none">
+            <path d="M-60,70 Q120,10 260,130 T540,50" stroke="rgba(255, 255, 255, 0.16)" stroke-width="1.8" />
+            <path d="M-80,180 Q90,260 250,110 T560,230" stroke="rgba(255, 255, 255, 0.18)" stroke-width="2" />
+            <path d="M-40,280 Q170,160 320,280 T560,170" stroke="rgba(255, 255, 255, 0.14)" stroke-width="1.8" />
+            <path d="M20,-10 Q160,110 300,-10 T520,100" stroke="rgba(255, 255, 255, 0.16)" stroke-width="1.8" />
+            <path d="M-50,340 Q150,230 310,350 T560,260" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.6" />
+          </svg>
+
+          <div class="promo-text-wrap">
+            <h3 class="promo-hero-title">
+              JOWAR<br>
+              PUFFS
+            </h3>
+
+            <div class="promo-tagline">
+              FOR THOSE WHO KNOW<br>
+              WHAT THEY WANT.
+            </div>
+          </div>
+
+          <div class="promo-img-wrap">
+            <img src="media/Images/Jowar Puffs.png" alt="Jowar Puffs Glass Bowl" class="promo-photo promo-photo-bowl">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ==========================================================================
+       PRODUCT CATALOG & FLAVOR EXPLORER
+       ========================================================================== -->
+  <section class="catalog-section" id="catalogSection">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle"><i class="fa-solid fa-sparkles"></i> Gourmet Pantry Selection</span>
+        <h2 class="section-title">Explore Our <span class="highlight-gradient">Roasted Flavours</span></h2>
+        <p class="section-desc">100% slow-roasted superfoods seasoned with authentic spices. Never fried, zero palm oil.
+        </p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="catalog-filter-bar">
+        <button class="filter-btn active" data-filter="all">
+          <i class="fa-solid fa-fire-flame-curved"></i> All Snacks <span class="filter-count">10</span>
+        </button>
+        <button class="filter-btn" data-filter="jowar">
+          <i class="fa-solid fa-wheat-awn"></i> Jowar Puffs • ₹90 <span class="filter-count">5</span>
+        </button>
+        <button class="filter-btn" data-filter="makhana">
+          <i class="fa-solid fa-seedling"></i> Roasted Makhana • ₹180 <span class="filter-count">5</span>
+        </button>
+      </div>
+
+      <!-- Creative & Attractive Products Grid -->
+      <!-- Authentic Gourmet Flavour Showcase Grid (Matching Reference Spec) -->
+      <!-- Balaji & Modern D2C Style Showcase Grid (With Upward Bursting Snacks on Hover) -->
+      <div class="product-grid" id="productGrid">
+
+        <!-- Product 1: Jowar Cheese & Herbs -->
+        <div class="product-card snack-interactive-card" data-category="jowar">
+          <div class="snack-stage-box" style="--stage-bg: #FFF4F0;">
+            <!-- Pouch & Burst Container -->
+            <div class="snack-pouch-layer">
+              <div class="snack-burst-layer">
+                <img src="media/Images/burst_jowar_puffs.png" alt="Bursting Jowar Puffs" class="burst-flock-img" loading="lazy">
+                <div class="snack-particles-cloud">
+                  <span class="fly-particle fp-1"></span>
+                  <span class="fly-particle fp-2"></span>
+                  <span class="fly-particle fp-3"></span>
+                </div>
+              </div>
+              <img src="media/Images/Product Image/1.png" alt="Jowar Puffs Cheese & Herbs" class="snack-pouch-img" loading="lazy">
+            </div>
+            <!-- Quick Add Button -->
+            <button class="stage-quick-pill btn-add-cart" 
+                    data-id="jowar-cheese" 
+                    data-name="Jowar Puffs - Cheese & Herbs" 
+                    data-price="90" 
+                    data-img="media/Images/Product Image/1.png" 
+                    title="Add to Cart">
+              <i class="fa-solid fa-plus"></i> Quick Add
+            </button>
+          </div>
+          <!-- Card Info -->
+          <div class="snack-details-box">
+            <span class="snack-category-tag">NAMKEEN</span>
+            <h3 class="snack-item-name">Cheese &amp; Herbs</h3>
+            <div class="snack-price-row">
+              <span class="snack-price-val">From ₹ 90</span>
+              <button class="snack-add-icon-btn btn-add-cart" 
+                      data-id="jowar-cheese" 
+                      data-name="Jowar Puffs - Cheese & Herbs" 
+                      data-price="90" 
+                      data-img="media/Images/Product Image/1.png" 
+                      title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: Jowar Cheesy Jalapeno -->
+        <div class="product-card snack-interactive-card" data-category="jowar">
+          <div class="snack-stage-box" style="--stage-bg: #FEEDE6;">
+            <div class="snack-pouch-layer">
+              <div class="snack-burst-layer">
+                <img src="media/Images/burst_jowar_puffs.png" alt="Bursting Jowar Puffs" class="burst-flock-img" loading="lazy">
+                <div class="snack-particles-cloud">
+                  <span class="fly-particle fp-1"></span>
+                  <span class="fly-particle fp-2"></span>
+                  <span class="fly-particle fp-3"></span>
+                </div>
+              </div>
+              <img src="media/Images/Product Image/2.png" alt="Jowar Puffs Cheesy Jalapeno" class="snack-pouch-img" loading="lazy">
+            </div>
+            <button class="stage-quick-pill btn-add-cart" 
+                    data-id="jowar-jalapeno" 
+                    data-name="Jowar Puffs - Cheesy Jalapeno" 
+                    data-price="90" 
+                    data-img="media/Images/Product Image/2.png" 
+                    title="Add to Cart">
+              <i class="fa-solid fa-plus"></i> Quick Add
+            </button>
+          </div>
+          <div class="snack-details-box">
+            <span class="snack-category-tag">NAMKEEN</span>
+            <h3 class="snack-item-name">Cheesy Jalapeno</h3>
+            <div class="snack-price-row">
+              <span class="snack-price-val">From ₹ 90</span>
+              <button class="snack-add-icon-btn btn-add-cart" 
+                      data-id="jowar-jalapeno" 
+                      data-name="Jowar Puffs - Cheesy Jalapeno" 
+                      data-price="90" 
+                      data-img="media/Images/Product Image/2.png" 
+                      title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3: Jowar Indian Spices -->
+        <div class="product-card snack-interactive-card" data-category="jowar">
+          <div class="snack-stage-box" style="--stage-bg: #FFF4F0;">
+            <div class="snack-pouch-layer">
+              <div class="snack-burst-layer">
+                <img src="media/Images/burst_jowar_puffs.png" alt="Bursting Jowar Puffs" class="burst-flock-img" loading="lazy">
+                <div class="snack-particles-cloud">
+                  <span class="fly-particle fp-1"></span>
+                  <span class="fly-particle fp-2"></span>
+                  <span class="fly-particle fp-3"></span>
+                </div>
+              </div>
+              <img src="media/Images/Product Image/3.png" alt="Jowar Puffs Indian Spices" class="snack-pouch-img" loading="lazy">
+            </div>
+            <button class="stage-quick-pill btn-add-cart" 
+                    data-id="jowar-spices" 
+                    data-name="Jowar Puffs - Indian Spices" 
+                    data-price="90" 
+                    data-img="media/Images/Product Image/3.png" 
+                    title="Add to Cart">
+              <i class="fa-solid fa-plus"></i> Quick Add
+            </button>
+          </div>
+          <div class="snack-details-box">
+            <span class="snack-category-tag">NAMKEEN</span>
+            <h3 class="snack-item-name">Indian Spices</h3>
+            <div class="snack-price-row">
+              <span class="snack-price-val">From ₹ 90</span>
+              <button class="snack-add-icon-btn btn-add-cart" 
+                      data-id="jowar-spices" 
+                      data-name="Jowar Puffs - Indian Spices" 
+                      data-price="90" 
+                      data-img="media/Images/Product Image/3.png" 
+                      title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4: Jowar Fiery Peri Peri -->
+        <div class="product-card snack-interactive-card" data-category="jowar">
+          <div class="snack-stage-box" style="--stage-bg: #FEEDE6;">
+            <div class="snack-pouch-layer">
+              <div class="snack-burst-layer">
+                <img src="media/Images/burst_jowar_puffs.png" alt="Bursting Jowar Puffs" class="burst-flock-img" loading="lazy">
+                <div class="snack-particles-cloud">
+                  <span class="fly-particle fp-1"></span>
+                  <span class="fly-particle fp-2"></span>
+                  <span class="fly-particle fp-3"></span>
+                </div>
+              </div>
+              <img src="media/Images/Product Image/4.png" alt="Jowar Puffs Fiery Peri Peri" class="snack-pouch-img" loading="lazy">
+            </div>
+            <button class="stage-quick-pill btn-add-cart" 
+                    data-id="jowar-peri" 
+                    data-name="Jowar Puffs - Fiery Peri Peri" 
+                    data-price="90" 
+                    data-img="media/Images/Product Image/4.png" 
+                    title="Add to Cart">
+              <i class="fa-solid fa-plus"></i> Quick Add
+            </button>
+          </div>
+          <div class="snack-details-box">
+            <span class="snack-category-tag">NAMKEEN</span>
+            <h3 class="snack-item-name">Fiery Peri Peri</h3>
+            <div class="snack-price-row">
+              <span class="snack-price-val">From ₹ 90</span>
+              <button class="snack-add-icon-btn btn-add-cart" 
+                      data-id="jowar-peri" 
+                      data-name="Jowar Puffs - Fiery Peri Peri" 
+                      data-price="90" 
+                      data-img="media/Images/Product Image/4.png" 
+                      title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5: Jowar Tangy Tomato -->
+        <div class="product-card snack-interactive-card" data-category="jowar">
+          <div class="snack-stage-box" style="--stage-bg: #FFF4F0;">
+            <div class="snack-pouch-layer">
+              <div class="snack-burst-layer">
+                <img src="media/Images/burst_jowar_puffs.png" alt="Bursting Jowar Puffs" class="burst-flock-img" loading="lazy">
+                <div class="snack-particles-cloud">
+                  <span class="fly-particle fp-1"></span>
+                  <span class="fly-particle fp-2"></span>
+                  <span class="fly-particle fp-3"></span>
+                </div>
+              </div>
+              <img src="media/Images/Product Image/5.png" alt="Jowar Puffs Tangy Tomato" class="snack-pouch-img" loading="lazy">
+            </div>
+            <button class="stage-quick-pill btn-add-cart" 
+                    data-id="jowar-tomato" 
+                    data-name="Jowar Puffs - Tangy Tomato" 
+                    data-price="90" 
+                    data-img="media/Images/Product Image/5.png" 
+                    title="Add to Cart">
+              <i class="fa-solid fa-plus"></i> Quick Add
+            </button>
+          </div>
+          <div class="snack-details-box">
+            <span class="snack-category-tag">NAMKEEN</span>
+            <h3 class="snack-item-name">Tangy Tomato</h3>
+            <div class="snack-price-row">
+              <span class="snack-price-val">From ₹ 90</span>
+              <button class="snack-add-icon-btn btn-add-cart" 
+                      data-id="jowar-tomato" 
+                      data-name="Jowar Puffs - Tangy Tomato" 
+                      data-price="90" 
+                      data-img="media/Images/Product Image/5.png" 
+                      title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6: Makhana Smoky Barbeque -->
+        <div class="product-card snack-interactive-card" data-category="makhana">
+          <div class="snack-stage-box" style="--stage-bg: #FEEDE6;">
+            <div class="snack-pouch-layer">
+              <div class="snack-burst-layer">
+                <img src="media/Images/burst_makhana_seeds.png" alt="Bursting Roasted Makhana" class="burst-flock-img" loading="lazy">
+                <div class="snack-particles-cloud">
+                  <span class="fly-particle fp-1"></span>
+                  <span class="fly-particle fp-2"></span>
+                  <span class="fly-particle fp-3"></span>
+                </div>
+              </div>
+              <img src="media/Images/Product Image/6.png" alt="Makhana Smoky Barbeque" class="snack-pouch-img" loading="lazy">
+            </div>
+            <button class="stage-quick-pill btn-add-cart" 
+                    data-id="makhana-bbq" 
+                    data-name="Makhana - Smoky Barbeque" 
+                    data-price="180" 
+                    data-img="media/Images/Product Image/6.png" 
+                    title="Add to Cart">
+              <i class="fa-solid fa-plus"></i> Quick Add
+            </button>
+          </div>
+          <div class="snack-details-box">
+            <span class="snack-category-tag">NAMKEEN</span>
+            <h3 class="snack-item-name">Smoky Barbeque</h3>
+            <div class="snack-price-row">
+              <span class="snack-price-val">From ₹ 180</span>
+              <button class="snack-add-icon-btn btn-add-cart" 
+                      data-id="makhana-bbq" 
+                      data-name="Makhana - Smoky Barbeque" 
+                      data-price="180" 
+                      data-img="media/Images/Product Image/6.png" 
+                      title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7: Makhana Cheese & Herbs -->
+        <div class="product-card snack-interactive-card" data-category="makhana">
+          <div class="snack-stage-box" style="--stage-bg: #FFF4F0;">
+            <div class="snack-pouch-layer">
+              <div class="snack-burst-layer">
+                <img src="media/Images/burst_makhana_seeds.png" alt="Bursting Roasted Makhana" class="burst-flock-img" loading="lazy">
+                <div class="snack-particles-cloud">
+                  <span class="fly-particle fp-1"></span>
+                  <span class="fly-particle fp-2"></span>
+                  <span class="fly-particle fp-3"></span>
+                </div>
+              </div>
+              <img src="media/Images/Product Image/7.png" alt="Makhana Cheese & Herbs" class="snack-pouch-img" loading="lazy">
+            </div>
+            <button class="stage-quick-pill btn-add-cart" 
+                    data-id="makhana-cheese" 
+                    data-name="Makhana - Cheese & Herbs" 
+                    data-price="180" 
+                    data-img="media/Images/Product Image/7.png" 
+                    title="Add to Cart">
+              <i class="fa-solid fa-plus"></i> Quick Add
+            </button>
+          </div>
+          <div class="snack-details-box">
+            <span class="snack-category-tag">NAMKEEN</span>
+            <h3 class="snack-item-name">Cheese &amp; Herbs</h3>
+            <div class="snack-price-row">
+              <span class="snack-price-val">From ₹ 180</span>
+              <button class="snack-add-icon-btn btn-add-cart" 
+                      data-id="makhana-cheese" 
+                      data-name="Makhana - Cheese & Herbs" 
+                      data-price="180" 
+                      data-img="media/Images/Product Image/7.png" 
+                      title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 8: Makhana Cheesy Jalapeno -->
+        <div class="product-card snack-interactive-card" data-category="makhana">
+          <div class="snack-stage-box" style="--stage-bg: #FEEDE6;">
+            <div class="snack-pouch-layer">
+              <div class="snack-burst-layer">
+                <img src="media/Images/burst_makhana_seeds.png" alt="Bursting Roasted Makhana" class="burst-flock-img" loading="lazy">
+                <div class="snack-particles-cloud">
+                  <span class="fly-particle fp-1"></span>
+                  <span class="fly-particle fp-2"></span>
+                  <span class="fly-particle fp-3"></span>
+                </div>
+              </div>
+              <img src="media/Images/Product Image/8.png" alt="Makhana Cheesy Jalapeno" class="snack-pouch-img" loading="lazy">
+            </div>
+            <button class="stage-quick-pill btn-add-cart" 
+                    data-id="makhana-jalapeno" 
+                    data-name="Makhana - Cheesy Jalapeno" 
+                    data-price="180" 
+                    data-img="media/Images/Product Image/8.png" 
+                    title="Add to Cart">
+              <i class="fa-solid fa-plus"></i> Quick Add
+            </button>
+          </div>
+          <div class="snack-details-box">
+            <span class="snack-category-tag">NAMKEEN</span>
+            <h3 class="snack-item-name">Cheesy Jalapeno</h3>
+            <div class="snack-price-row">
+              <span class="snack-price-val">From ₹ 180</span>
+              <button class="snack-add-icon-btn btn-add-cart" 
+                      data-id="makhana-jalapeno" 
+                      data-name="Makhana - Cheesy Jalapeno" 
+                      data-price="180" 
+                      data-img="media/Images/Product Image/8.png" 
+                      title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 9: Makhana Gourmet Chocolate -->
+        <div class="product-card snack-interactive-card" data-category="makhana">
+          <div class="snack-stage-box" style="--stage-bg: #FFF4F0;">
+            <div class="snack-pouch-layer">
+              <div class="snack-burst-layer">
+                <img src="media/Images/burst_makhana_seeds.png" alt="Bursting Roasted Makhana" class="burst-flock-img" loading="lazy">
+                <div class="snack-particles-cloud">
+                  <span class="fly-particle fp-1"></span>
+                  <span class="fly-particle fp-2"></span>
+                  <span class="fly-particle fp-3"></span>
+                </div>
+              </div>
+              <img src="media/Images/Product Image/9.png" alt="Makhana Gourmet Chocolate" class="snack-pouch-img" loading="lazy">
+            </div>
+            <button class="stage-quick-pill btn-add-cart" 
+                    data-id="makhana-chocolate" 
+                    data-name="Makhana - Gourmet Chocolate" 
+                    data-price="180" 
+                    data-img="media/Images/Product Image/9.png" 
+                    title="Add to Cart">
+              <i class="fa-solid fa-plus"></i> Quick Add
+            </button>
+          </div>
+          <div class="snack-details-box">
+            <span class="snack-category-tag">NAMKEEN</span>
+            <h3 class="snack-item-name">Gourmet Chocolate</h3>
+            <div class="snack-price-row">
+              <span class="snack-price-val">From ₹ 180</span>
+              <button class="snack-add-icon-btn btn-add-cart" 
+                      data-id="makhana-chocolate" 
+                      data-name="Makhana - Gourmet Chocolate" 
+                      data-price="180" 
+                      data-img="media/Images/Product Image/9.png" 
+                      title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 10: Makhana Himalayan Pink Salt -->
+        <div class="product-card snack-interactive-card" data-category="makhana">
+          <div class="snack-stage-box" style="--stage-bg: #FEEDE6;">
+            <div class="snack-pouch-layer">
+              <div class="snack-burst-layer">
+                <img src="media/Images/burst_makhana_seeds.png" alt="Bursting Roasted Makhana" class="burst-flock-img" loading="lazy">
+                <div class="snack-particles-cloud">
+                  <span class="fly-particle fp-1"></span>
+                  <span class="fly-particle fp-2"></span>
+                  <span class="fly-particle fp-3"></span>
+                </div>
+              </div>
+              <img src="media/Images/Product Image/10.png" alt="Makhana Himalayan Pink Salt" class="snack-pouch-img" loading="lazy">
+            </div>
+            <button class="stage-quick-pill btn-add-cart" 
+                    data-id="makhana-salt" 
+                    data-name="Makhana - Himalayan Pink Salt" 
+                    data-price="180" 
+                    data-img="media/Images/Product Image/10.png" 
+                    title="Add to Cart">
+              <i class="fa-solid fa-plus"></i> Quick Add
+            </button>
+          </div>
+          <div class="snack-details-box">
+            <span class="snack-category-tag">NAMKEEN</span>
+            <h3 class="snack-item-name">Himalayan Pink Salt</h3>
+            <div class="snack-price-row">
+              <span class="snack-price-val">From ₹ 180</span>
+              <button class="snack-add-icon-btn btn-add-cart" 
+                      data-id="makhana-salt" 
+                      data-name="Makhana - Himalayan Pink Salt" 
+                      data-price="180" 
+                      data-img="media/Images/Product Image/10.png" 
+                      title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       CUSTOMER REVIEWS & SOCIAL PROOF (BALAJI & BIKAJI STYLE SNACK SHOWCASE)
+       ========================================================================== -->
+  <section class="reviews-section snack-showcase-section" id="reviewsSection">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="snack-reviews-header">
+        <h2 class="snack-reviews-title">
+          What our happy Customers <br>
+          <span class="snack-title-gradient">have to say !</span>
+        </h2>
+      </div>
+
+      <!-- 3 Vibrant Snack Brand Review Cards -->
+      <div class="snack-cards-grid">
+
+        <!-- Card 1: Sonia Shenoy (Sunset Terracotta / Schezwan Passion) -->
+        <div class="snack-review-card card-terracotta">
+          <div class="card-top-bar">
+            <span class="snack-flavor-tag tag-terracotta">
+              <i class="fa-solid fa-pepper-hot"></i> Fave: Schezwan Makhana
+            </span>
+            <div class="card-rating-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+
+          <div class="card-quote-wrapper">
+            <div class="card-quote-mark">“</div>
+            <p class="snack-quote-text">
+              Roast Foods is my go to place for all healthy snacking options. My family and me snack on Roast Foods Makhana and Jowar Puffs almost daily and we love how the products taste clean, chemical free and super yummy. My personal favourite is the <strong>Schezwan and Sour Cream Makhana</strong> and my son loves all the Jowar Puff flavours. Also as someone, who is a bit obsessed with health, this is a perfect combination of taste and health. All the best Soniya, more power to you and your vision!
+            </p>
+          </div>
+
+          <div class="card-author-footer">
+            <div class="author-photo-box">
+              <img src="media/Images/Testimonials/person1.jpg" alt="Sonia Shenoy" class="author-photo">
+            </div>
+            <div class="author-details">
+              <h4 class="author-name">Sonia Shenoy</h4>
+              <p class="author-title">Senior Editor, CNBC-TV18</p>
+            </div>
+            <div class="author-badge-box badge-media">
+              <i class="fa-solid fa-tv"></i>
+              <span>CNBC TV18</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Shweta Katariya Modi (Golden Roasted Honey - Featured Mom's Choice) -->
+        <div class="snack-review-card card-honey featured-card">
+          <div class="featured-ribbon">
+            <i class="fa-solid fa-crown"></i> MOM'S TOP PICK
+          </div>
+
+          <div class="card-top-bar">
+            <span class="snack-flavor-tag tag-honey">
+              <i class="fa-solid fa-shield-heart"></i> Fave: Cheese &amp; Parsley
+            </span>
+            <div class="card-rating-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+
+          <div class="card-quote-wrapper">
+            <div class="card-quote-mark">“</div>
+            <p class="snack-quote-text">
+              My family's &amp; my favourite snack option that's healthy and tasty. As a mother I am never worried when I hear the crackled packet sounds, as I know my kids are on to a healthy snack as I have <strong>replaced fried unhealthy snacks with roasted ones</strong>. My kids favourite are the <strong>Cheese &amp; Parsley Makhana's</strong> and <strong>Indian Spices Jowar Puffs</strong>. They are regulars in their school tiffin, vacation and even playdates. It's also a great gifting option. I have personally gifted these to my friends and family and they have not only loved it but it's now a regular on their grocery list. Thank you for the giving us a healthy, hygienically made, tasty and affordable snack option. Goodluck to the Team for all future endeavours!
+            </p>
+          </div>
+
+          <div class="card-author-footer">
+            <div class="author-photo-box">
+              <img src="media/Images/Testimonials/person2.jpg" alt="Shweta Katariya Modi" class="author-photo">
+            </div>
+            <div class="author-details">
+              <h4 class="author-name">Shweta Katariya Modi</h4>
+              <p class="author-title">Founder, The Earth School</p>
+            </div>
+            <div class="author-badge-box badge-earth">
+              <i class="fa-solid fa-school"></i>
+              <span>The Earth School</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Gourmet.palette (Fresh Garden Herb / Pistachio Connoisseur) -->
+        <div class="snack-review-card card-matcha">
+          <div class="card-top-bar">
+            <span class="snack-flavor-tag tag-matcha">
+              <i class="fa-solid fa-wheat-awn"></i> Fave: Roasted Jowar Puffs
+            </span>
+            <div class="card-rating-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+
+          <div class="card-quote-wrapper">
+            <div class="card-quote-mark">“</div>
+            <p class="snack-quote-text">
+              My love for snacking and Jowar Puffs me to try this new brand which I'm sure many can find it now in most of the super markets! Made from Jowar this pack of puffs is filled not just with flavours but also with nutrients. Its <strong>gluten free, cholesterol free, rich in fiber and zero trans fat</strong> this snacking is clearly the best Jowar Puffs I've eaten! Mindful snacking at it's best.
+            </p>
+          </div>
+
+          <div class="card-author-footer">
+            <div class="author-photo-box">
+              <img src="media/Images/Testimonials/person3.jpg" alt="Gourmet.palette" class="author-photo">
+            </div>
+            <div class="author-details">
+              <h4 class="author-name">Gourmet.palette</h4>
+              <p class="author-title">Food Blogger &amp; Connoisseur</p>
+            </div>
+            <div class="author-badge-box badge-foodie">
+              <i class="fa-solid fa-utensils"></i>
+              <span>Food Blogger</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       CART DRAWER (SLIDE OUT)
+       ========================================================================== -->
+  <div class="cart-drawer-backdrop" id="cartBackdrop"></div>
+  <div class="cart-drawer" id="cartDrawer" data-lenis-prevent>
+    <div class="cart-header">
+      <h3>Your Snack Box (<span class="cart-count-badge" style="position:static; display:inline-flex;">2</span>)</h3>
+      <button id="closeCartBtn" style="color: var(--text-primary); font-size: 1.3rem; padding: 4px 8px;">✕</button>
+    </div>
+    <div class="cart-items-body" id="cartItemsList" data-lenis-prevent>
+      <!-- Injected by JS -->
+    </div>
+    <div class="cart-footer">
+      <div
+        style="background: rgba(252, 148, 127, 0.12); border: 1px dashed #fc947f; padding: 10px; border-radius: 8px; margin-bottom: 16px; font-size: 0.84rem; color: #ed681c; text-align: center; font-weight: 700;">
+        🎉 You unlocked <strong>FREE Standard Shipping</strong>!
+      </div>
+      <div class="cart-subtotal-row">
+        <span>Subtotal:</span>
+        <span id="cartSubtotal" style="color: #ed681c;">₹278</span>
+      </div>
+      <button class="btn-primary" style="width: 100%; justify-content: center;"
+        onclick="alert('Proceeding to secure checkout! Thank you for choosing Roast Foods.')">
+        <span>Proceed to Checkout</span>
+        <i class="fa-solid fa-lock"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       AUTHENTIC ROAST FOODS FOOTER (MATCHING ORIGINAL DESIGN PHOTO)
+       Clean Minimalist Layout: Logo + Quick Links + Important Links
+       ========================================================================== -->
+  <!-- ==========================================================================
+       BESPOKE ROAST FOODS FOOTER (PURE ROASTED MAKHANA BACKDROP)
+       Editorial Floating Glass Pavilion with High-Craft Brand Details
+       ========================================================================== -->
+  <!-- ==========================================================================
+       DARK CHOCOLATE LUXURY FOOTER (ROAST FOODS ARTISAN THEME)
+       Deep Cocoa & Caramel Gold Palette with Pure Roasted Makhana Texture
+       ========================================================================== -->
+  <!-- ==========================================================================
+       BURRITO MADRE INSPIRED SHOWSTOPPER FOOTER
+       Deep Forest Green, Organic Contours, Crisp Editorial Links & Giant Brand Typography
+       ========================================================================== -->
+  <footer class="burrito-footer" id="mainFooter">
+    <!-- SVG Topographic Contour Lines Overlay -->
+    <div class="burrito-contour-lines" aria-hidden="true">
+      <svg viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M-100 120 C 300 40, 600 240, 1000 80 C 1200 -20, 1400 180, 1600 100" stroke="rgba(255,255,255,0.07)" stroke-width="2" />
+        <path d="M-100 240 C 200 160, 500 380, 900 220 C 1200 100, 1350 320, 1600 220" stroke="rgba(255,255,255,0.06)" stroke-width="2" />
+        <path d="M-100 380 C 350 300, 700 500, 1100 340 C 1300 260, 1450 420, 1600 360" stroke="rgba(255,255,255,0.05)" stroke-width="2" />
+        <path d="M-100 500 C 400 420, 800 580, 1200 460 C 1400 400, 1500 520, 1600 480" stroke="rgba(255,255,255,0.05)" stroke-width="2" />
+      </svg>
+    </div>
+
+    <div class="burrito-footer-inner">
+      <div class="container">
+
+        <!-- Upper Editorial Grid -->
+        <div class="burrito-top-grid">
+
+          <!-- Left Column: Brand Logo & Tagline -->
+          <div class="burrito-col-brand">
+            <a href="#" class="burrito-logo-link">
+              <img src="media/Images/logo.png" alt="Roast Foods" class="burrito-logo-img">
+            </a>
+            <p class="burrito-brand-desc">
+              Pioneering 100% slow-roasted lotus seed superfoods across India. Clean, guilt-free everyday crunch.
+            </p>
+          </div>
+
+          <!-- Nav Column 1: Menu & Story -->
+          <div class="burrito-col-nav">
+            <ul class="burrito-nav-links">
+              <li><a href="#catalogSection">MENU</a></li>
+              <li><a href="#catalogSection">OUR SNACKS</a></li>
+              <li><a href="#catalogSection">ROASTED MAKHANA</a></li>
+              <li><a href="#catalogSection">JOWAR PUFFS</a></li>
+              <li><a href="#storySection">ABOUT US</a></li>
+              <li><a href="#storySection">ROASTERY TEAM</a></li>
+              <li><a href="#reviewsSection">REVIEWS</a></li>
+              <li><a href="#catalogSection">CUSTOM BOX</a></li>
+            </ul>
+          </div>
+
+          <!-- Nav Column 2: Legal & Pill CTA -->
+          <div class="burrito-col-nav">
+            <a href="#catalogSection" class="burrito-pill-cta">SHOP NOW</a>
+            <ul class="burrito-nav-links">
+              <li><a href="#">FAQ</a></li>
+              <li><a href="mailto:care@roastfoods.com">CONTACT</a></li>
+              <li><a href="#">TERMS OF BUSINESS</a></li>
+              <li><a href="#">PRIVACY POLICY &amp; COOKIES</a></li>
+              <li><a href="#">NEWSLETTER</a></li>
+              <li><a href="#">FSSAI CERTIFICATION</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Social & Country Badges -->
+          <div class="burrito-col-social">
+            <div class="burrito-social-icons">
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <p class="burrito-copyright">
+              &copy; Roast Foods 2026.<br>All rights reserved.
+            </p>
+            <div class="burrito-badges-row">
+              <span class="burrito-flag-pill" title="Made in India">🇮🇳 INDIA</span>
+              <span class="burrito-flag-pill" title="100% Vegetarian">🌿 100% VEG</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Giant Edge-to-Edge Typography Banner (Burrito Madre Style) -->
+      <div class="burrito-giant-brand-wrap">
+        <h1 class="burrito-giant-brand">
+          <span class="giant-word-orange">ROAST</span>
+          <span class="giant-word-red">FOODS</span>
+        </h1>
+        <!-- Floating Stamp Sticker (Bottom Left) -->
+        <div class="burrito-floating-sticker" title="100% Air Roasted">
+          <i class="fa-solid fa-fire-burner"></i>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Lenis Smooth Scroll Engine -->
+  <script src="media/js/lenis.min.js"></script>
+  <script src="media/js/app.js"></script>
+</body>
+
+</html>
