@@ -307,6 +307,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  window.addToCartGlobal = (item) => {
+    const existing = cart.find(i => i.id === item.id);
+    if (existing) {
+      existing.qty += (item.qty || 1);
+    } else {
+      cart.push({
+        id: item.id,
+        name: item.name,
+        price: item.price,
+        qty: item.qty || 1,
+        img: item.img
+      });
+    }
+    renderCart();
+    openCart();
+    showToast(`Added "${item.name}" to your cart! 🍿`);
+  };
+
   // Wishlist heart button toggle
   const wishlistBtns = document.querySelectorAll('.card-wishlist-btn');
   wishlistBtns.forEach(btn => {
@@ -722,29 +740,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // When clicking any category in the dropdown
+    // When clicking any category in the dropdown, close menu and allow normal navigation
     dropdownItems.forEach(item => {
-      item.addEventListener('click', (e) => {
-        const filterType = item.getAttribute('data-filter-select');
+      item.addEventListener('click', () => {
         shopDropdownWrapper.classList.remove('open');
-
-        const catalog = document.querySelector('#catalogSection');
-        if (catalog) {
-          e.preventDefault();
-          if (window.lenis) {
-            window.lenis.scrollTo(catalog, { offset: -70 });
-          } else {
-            catalog.scrollIntoView({ behavior: 'smooth' });
-          }
-
-          if (filterType) {
-            // Instantly activate corresponding filter button
-            const targetFilterBtn = document.querySelector(`.filter-btn[data-filter="${filterType}"]`);
-            if (targetFilterBtn) {
-              targetFilterBtn.click();
-            }
-          }
-        }
       });
     });
   }

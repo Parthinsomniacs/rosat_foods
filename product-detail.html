@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Product Details - Roast Foods (Roasted, Not Fried)</title>
+  <meta name="description" id="pageMetaDesc" content="Artisan roasted healthy superfood snacks made from ancient grains. 0% palm oil, high protein, and maximum crunch.">
+
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="media/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="media/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="media/favicon/apple-icon-180x180.png">
+  <link rel="manifest" href="media/favicon/manifest.json">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="media/css/lenis.css">
+  <link rel="stylesheet" href="media/css/style.css">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="pdp-page">
+
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" id="mainBrandLogo">
+        <img src="media/Images/logo.png" alt="Roast Foods — Roasted, Not Fried" class="brand-logo-img">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-dropdown-wrapper">
+          <a href="#catalogSection" class="nav-link nav-dropdown-trigger active" id="shopNavDropdownBtn" aria-haspopup="true" aria-expanded="false">
+            Shop <i class="fa-solid fa-chevron-down nav-chevron-icon"></i>
+          </a>
+          <div class="nav-dropdown-menu" id="shopDropdownMenu">
+            <a href="makhana.html" class="dropdown-item">Makhana</a>
+            <a href="jowar-puff.html" class="dropdown-item">Jowar Puff</a>
+            <a href="millet-namkeen.html" class="dropdown-item">Millet Namkeen</a>
+            <a href="whole-grain-chips.html" class="dropdown-item">Whole Grain Chips</a>
+            <a href="ragi-stix.html" class="dropdown-item">Ragi Stix</a>
+            <a href="trial-pack.html" class="dropdown-item">Trial Pack</a>
+          </div>
+        </li>
+        <li><a href="index.html#mainFooter" class="nav-link">Find Us</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn-icon" data-cart-toggle aria-label="View Cart" id="cartHeaderBtn">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count-badge">3</span>
+        </button>
+        <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <!-- Main Product Detail View Section (Matching Exact User Reference Image) -->
+    <section class="pdp-main-section">
+      <div class="pdp-hero-container">
+        <!-- Left Column: Product Showcase Gallery & Interactive Thumbnails -->
+        <div class="pdp-gallery-column">
+          <div class="pdp-main-image-wrap">
+            <span class="pdp-zoom-icon" id="pdpZoomBtn" title="Zoom In">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <img src="media/Images/Product Image/makhana_bbq_front.png" alt="Makhana - Barbeque" id="pdpMainImage">
+          </div>
+
+          <div class="pdp-thumbnails-strip" id="pdpThumbnailsStrip">
+            <div class="pdp-thumb-item active" data-img="media/Images/Product Image/makhana_bbq_front.png">
+              <img src="media/Images/Product Image/makhana_bbq_front.png" alt="Front Pouch">
+            </div>
+            <div class="pdp-thumb-item" data-img="media/Images/Product Image/makhana_bbq_back.png">
+              <img src="media/Images/Product Image/makhana_bbq_back.png" alt="Back Pouch">
+            </div>
+            <div class="pdp-thumb-item" data-img="media/Images/Product Image/makhana_bbq_nutrition.png">
+              <img src="media/Images/Product Image/makhana_bbq_nutrition.png" alt="Nutrition Facts">
+            </div>
+            <div class="pdp-thumb-item" data-img="media/Images/Product Image/makhana_bowl.png">
+              <img src="media/Images/Product Image/makhana_bowl.png" alt="Makhana Bowl">
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Product Information, Ingredients, Bowl & Purchase -->
+        <div class="pdp-summary-column">
+          <div class="pdp-title-row">
+            <h1 class="pdp-title-text" id="pdpTitleText">Makhana-Barbeque</h1>
+            <div class="pdp-title-rule"></div>
+          </div>
+
+          <div class="pdp-price-amount" id="pdpPriceAmount">₹180.00</div>
+
+          <hr class="pdp-divider-line">
+
+          <div class="pdp-category-line">
+            Category <a href="makhana.html" id="pdpCategoryLink">Makhana</a>
+          </div>
+
+          <div class="pdp-body-paragraphs">
+            <p id="pdpFlavourDesc">A globally loved blend of irresistible smoky sweet flavours!</p>
+            <p id="pdpNetWeight">Net Weight – 70g (2.5 OZ)</p>
+            <p id="pdpIngredients">Ingredients- Makhana (Popped Water Lily Seeds), Edible Vegetable Oil (Sunflower Oil), Onion, Tomato, Chilli, Garlic, Salt, Citric Acid.</p>
+          </div>
+
+          <div class="pdp-featured-bowl-wrap">
+            <img src="media/Images/Product Image/makhana_bowl.png" alt="Roasted Makhana Seeds" id="pdpBowlImg">
+          </div>
+
+          <div class="pdp-free-shipping-tag">Free shipping above Rs. 299!</div>
+
+          <div class="pdp-cart-actions-row">
+            <input type="number" class="pdp-cart-qty-input" id="pdpCartQty" value="1" min="1" max="99">
+            <button type="button" class="pdp-cart-submit-btn" id="pdpCartBtn">ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Details Tabs Section (Description, Ingredients & Nutrition, Reviews) -->
+    <section class="pdp-details-tabs-section">
+      <div class="pdp-tabs-wrapper">
+        <ul class="pdp-tabs-nav" role="tablist">
+          <li class="pdp-tab-item active" data-tab="description" role="tab" aria-selected="true" tabindex="0">
+            Description
+          </li>
+          <li class="pdp-tab-item" data-tab="ingredients" role="tab" aria-selected="false" tabindex="0">
+            Ingredients &amp; Nutrition
+          </li>
+          <li class="pdp-tab-item" data-tab="reviews" role="tab" aria-selected="false" tabindex="0">
+            Reviews (0)
+          </li>
+        </ul>
+
+        <div class="pdp-tabs-content">
+          <!-- Description Panel -->
+          <div class="pdp-tab-panel active" id="pdpTabDescription" role="tabpanel">
+            <p id="pdpTabDescText">
+              Makhana’s are also popularly known as Popped Water Lily Seeds or Foxnuts. This amazing plant-based snack is light, crunchy and a powerhouse of nutrition. Makhana’s are an exceptional source of nutrients that strike an ideal balance between well-being and indulgence!
+            </p>
+            <p style="margin-top: 14px; color: #4B5563;">
+              Slow roasted to crisp perfection with 0% palm oil and no artificial preservatives, our snacks bring you rich authentic flavors with guilt-free everyday crunch.
+            </p>
+          </div>
+
+          <!-- Ingredients & Nutrition Panel -->
+          <div class="pdp-tab-panel" id="pdpTabIngredients" role="tabpanel">
+            <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; color: #111827;">Ingredients:</h4>
+            <p id="pdpTabIngredientsText" style="margin-bottom: 18px;">
+              Makhana (Popped Water Lily Seeds), Edible Vegetable Oil (Sunflower Oil), Onion, Tomato, Chilli, Garlic, Salt, Citric Acid.
+            </p>
+            <div class="pdp-nutrition-highlights">
+              <div class="pdp-nutri-badge"><i class="fa-solid fa-fire-burner"></i> 100% Roasted, Never Deep-Fried</div>
+              <div class="pdp-nutri-badge"><i class="fa-solid fa-shield-heart"></i> 0% Palm Oil &amp; Trans Fat</div>
+              <div class="pdp-nutri-badge"><i class="fa-solid fa-leaf"></i> 100% Plant-Based Superfood</div>
+              <div class="pdp-nutri-badge"><i class="fa-solid fa-bolt"></i> High Plant Protein &amp; Fibre</div>
+            </div>
+          </div>
+
+          <!-- Reviews Panel -->
+          <div class="pdp-tab-panel" id="pdpTabReviews" role="tabpanel">
+            <div class="pdp-reviews-box">
+              <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px; color: #111827;">Reviews</h3>
+              <p class="pdp-no-reviews-text">There are no reviews yet.</p>
+              
+              <div class="pdp-review-form-wrap">
+                <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; color: #111827;">Be the first to review &ldquo;<span id="pdpReviewProdTitle">Makhana-Barbeque</span>&rdquo;</h4>
+                <p style="font-size: 0.88rem; color: #6B7280; margin-bottom: 16px;">Your email address will not be published. Required fields are marked *</p>
+                <form onsubmit="event.preventDefault(); alert('Thank you! Your review has been submitted for moderation.'); this.reset();">
+                  <div style="margin-bottom: 14px;">
+                    <label style="display:block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px; color: #374151;">Your Rating *</label>
+                    <div style="color: #ED681C; font-size: 1.25rem; letter-spacing: 4px; cursor: pointer;">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div style="margin-bottom: 14px;">
+                    <label style="display:block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px; color: #374151;">Your Review *</label>
+                    <textarea rows="4" style="width:100%; border: 1px solid #D1D5DB; border-radius: 6px; padding: 10px; font-family: inherit; font-size: 0.95rem;" required placeholder="Write your review here..."></textarea>
+                  </div>
+                  <button type="submit" class="pdp-cart-submit-btn" style="padding: 0 28px; height: 42px; font-size: 0.9rem;">Submit Review</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Products Section -->
+    <section class="pdp-related-section">
+      <div class="pdp-related-container">
+        <h2 class="pdp-related-title">Related products</h2>
+        <div class="product-grid" id="pdpRelatedGrid">
+          <!-- Injected dynamically via pdp.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="burrito-footer" id="mainFooter">
+    <!-- SVG Topographic Contour Lines Overlay -->
+    <div class="burrito-contour-lines" aria-hidden="true">
+      <svg viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M-100 120 C 300 40, 600 240, 1000 80 C 1200 -20, 1400 180, 1600 100" stroke="rgba(255,255,255,0.07)" stroke-width="2" />
+        <path d="M-100 240 C 200 160, 500 380, 900 220 C 1200 100, 1350 320, 1600 220" stroke="rgba(255,255,255,0.06)" stroke-width="2" />
+        <path d="M-100 380 C 350 300, 700 500, 1100 340 C 1300 260, 1450 420, 1600 360" stroke="rgba(255,255,255,0.05)" stroke-width="2" />
+        <path d="M-100 500 C 400 420, 800 580, 1200 460 C 1400 400, 1500 520, 1600 480" stroke="rgba(255,255,255,0.05)" stroke-width="2" />
+      </svg>
+    </div>
+
+    <div class="burrito-footer-inner">
+      <div class="container">
+
+        <!-- Upper Editorial Grid -->
+        <div class="burrito-top-grid">
+
+          <!-- Left Column: Brand Logo & Tagline -->
+          <div class="burrito-col-brand">
+            <a href="#" class="burrito-logo-link">
+              <img src="media/Images/logo.png" alt="Roast Foods" class="burrito-logo-img">
+            </a>
+            <p class="burrito-brand-desc">
+              Pioneering 100% slow-roasted lotus seed superfoods across India. Clean, guilt-free everyday crunch.
+            </p>
+          </div>
+
+          <!-- Nav Column 1: Menu & Story -->
+          <div class="burrito-col-nav">
+            <ul class="burrito-nav-links">
+              <li><a href="#catalogSection">MENU</a></li>
+              <li><a href="#catalogSection">OUR SNACKS</a></li>
+              <li><a href="#catalogSection">ROASTED MAKHANA</a></li>
+              <li><a href="#catalogSection">JOWAR PUFFS</a></li>
+              <li><a href="#storySection">ABOUT US</a></li>
+              <li><a href="#storySection">ROASTERY TEAM</a></li>
+              <li><a href="#reviewsSection">REVIEWS</a></li>
+              <li><a href="#catalogSection">CUSTOM BOX</a></li>
+            </ul>
+          </div>
+
+          <!-- Nav Column 2: Legal & Pill CTA -->
+          <div class="burrito-col-nav">
+            <a href="#catalogSection" class="burrito-pill-cta">SHOP NOW</a>
+            <ul class="burrito-nav-links">
+              <li><a href="#">FAQ</a></li>
+              <li><a href="mailto:care@roastfoods.com">CONTACT</a></li>
+              <li><a href="#">TERMS OF BUSINESS</a></li>
+              <li><a href="#">PRIVACY POLICY &amp; COOKIES</a></li>
+              <li><a href="#">NEWSLETTER</a></li>
+              <li><a href="#">FSSAI CERTIFICATION</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Social & Country Badges -->
+          <div class="burrito-col-social">
+            <div class="burrito-social-icons">
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <p class="burrito-copyright">
+              &copy; Roast Foods 2026.<br>All rights reserved.
+            </p>
+            <div class="burrito-badges-row">
+              <span class="burrito-flag-pill" title="Made in India">🇮🇳 INDIA</span>
+              <span class="burrito-flag-pill" title="100% Vegetarian">🌿 100% VEG</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Giant Edge-to-Edge Typography Banner (Burrito Madre Style) -->
+      <div class="burrito-giant-brand-wrap">
+        <h1 class="burrito-giant-brand">
+          <span class="giant-word-orange">ROAST</span>
+          <span class="giant-word-red">FOODS</span>
+        </h1>
+        <!-- Floating Stamp Sticker (Bottom Left) -->
+        <div class="burrito-floating-sticker" title="100% Air Roasted">
+          <i class="fa-solid fa-fire-burner"></i>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <div class="cart-drawer-backdrop" id="cartBackdrop"></div>
+  <div class="cart-drawer" id="cartDrawer" data-lenis-prevent>
+    <div class="cart-header">
+      <h3>Your Snack Box (<span class="cart-count-badge" style="position:static; display:inline-flex;">2</span>)</h3>
+      <button id="closeCartBtn" style="color: var(--text-primary); font-size: 1.3rem; padding: 4px 8px;">✕</button>
+    </div>
+    <div class="cart-items-body" id="cartItemsList" data-lenis-prevent>
+      <!-- Injected by JS -->
+    </div>
+    <div class="cart-footer">
+      <div
+        style="background: rgba(252, 148, 127, 0.12); border: 1px dashed #fc947f; padding: 10px; border-radius: 8px; margin-bottom: 16px; font-size: 0.84rem; color: #ed681c; text-align: center; font-weight: 700;">
+        🎉 You unlocked <strong>FREE Standard Shipping</strong>!
+      </div>
+      <div class="cart-subtotal-row">
+        <span>Subtotal:</span>
+        <span id="cartSubtotal" style="color: #ed681c;">₹278</span>
+      </div>
+      <button class="btn-primary" style="width: 100%; justify-content: center;"
+        onclick="alert('Proceeding to secure checkout! Thank you for choosing Roast Foods.')">
+        <span>Proceed to Checkout</span>
+        <i class="fa-solid fa-lock"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       AUTHENTIC ROAST FOODS FOOTER (MATCHING ORIGINAL DESIGN PHOTO)
+       Clean Minimalist Layout: Logo + Quick Links + Important Links
+       ========================================================================== -->
+  <!-- ==========================================================================
+       BESPOKE ROAST FOODS FOOTER (PURE ROASTED MAKHANA BACKDROP)
+       Editorial Floating Glass Pavilion with High-Craft Brand Details
+       ========================================================================== -->
+  <!-- ==========================================================================
+       DARK CHOCOLATE LUXURY FOOTER (ROAST FOODS ARTISAN THEME)
+       Deep Cocoa & Caramel Gold Palette with Pure Roasted Makhana Texture
+       ========================================================================== -->
+  <!-- ==========================================================================
+       BURRITO MADRE INSPIRED SHOWSTOPPER FOOTER
+       Deep Forest Green, Organic Contours, Crisp Editorial Links & Giant Brand Typography
+       ========================================================================== -->
+
+  <div class="promo-modal-backdrop" id="promoDetailsModal" aria-hidden="true">
+    <div class="promo-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="promoModalTitle">
+      <button type="button" class="promo-modal-close" id="promoModalCloseBtn" aria-label="Close details popup">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="promo-modal-content" id="promoModalDynamicContent">
+        <!-- Injected via JavaScript dynamically based on button clicked -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Lenis Smooth Scroll Engine -->
+  <script src="media/js/lenis.min.js"></script>
+  <script src="media/js/app.js"></script>
+
+  <!-- PDP Dynamic Data Loader & Interaction Logic -->
+  <script src="media/js/pdp.js"></script>
+</body>
+
+</html>
