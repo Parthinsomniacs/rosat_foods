@@ -32,9 +32,21 @@
 
       <ul class="nav-links">
         <li><a href="#heroSection" class="nav-link active">Home</a></li>
-        <li><a href="#promoDuoSection" class="nav-link">Superfoods</a></li>
-        <li><a href="#catalogSection" class="nav-link">Our Snacks</a></li>
-        <li><a href="#reviewsSection" class="nav-link">Reviews</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-dropdown-wrapper">
+          <a href="#catalogSection" class="nav-link nav-dropdown-trigger" id="shopNavDropdownBtn" aria-haspopup="true" aria-expanded="false">
+            Shop <i class="fa-solid fa-chevron-down nav-chevron-icon"></i>
+          </a>
+          <div class="nav-dropdown-menu" id="shopDropdownMenu">
+            <a href="#catalogSection" class="dropdown-item" data-filter-select="makhana">Makhana</a>
+            <a href="#catalogSection" class="dropdown-item" data-filter-select="jowar">Jowar Puff</a>
+            <a href="#catalogSection" class="dropdown-item" data-filter-select="millet">Millet Namkeen</a>
+            <a href="#catalogSection" class="dropdown-item" data-filter-select="chips">Whole Grain Chips</a>
+            <a href="#catalogSection" class="dropdown-item" data-filter-select="ragi">Ragi Stix</a>
+            <a href="#catalogSection" class="dropdown-item" data-filter-select="trial">Trial Pack</a>
+          </div>
+        </li>
+        <li><a href="#mainFooter" class="nav-link">Find Us</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -99,16 +111,16 @@
     <div class="container">
       <div class="promo-duo-grid">
 
-        <!-- Left Promo Card: Forest Green "JOIN THE CREW" -->
+        <!-- Left Promo Card: Coral Peach "MAKHANA" -->
         <div class="promo-card card-green">
           <!-- Abstract Contour Waves SVG Background -->
           <svg class="promo-contour-bg" viewBox="0 0 500 380" fill="none" xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="none">
-            <path d="M-50,60 Q140,180 300,50 T560,160" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1.8" />
-            <path d="M-80,160 Q80,40 240,220 T580,120" stroke="rgba(255, 255, 255, 0.12)" stroke-width="2" />
-            <path d="M-30,260 Q160,320 320,180 T560,270" stroke="rgba(255, 255, 255, 0.09)" stroke-width="1.8" />
-            <path d="M30,-10 Q200,90 350,10 T530,140" stroke="rgba(255, 255, 255, 0.11)" stroke-width="1.8" />
-            <path d="M-40,340 Q150,250 310,360 T560,280" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.6" />
+            <path d="M-50,60 Q140,180 300,50 T560,160" stroke="rgba(255, 255, 255, 0.28)" stroke-width="2" />
+            <path d="M-80,160 Q80,40 240,220 T580,120" stroke="rgba(255, 255, 255, 0.32)" stroke-width="2.2" />
+            <path d="M-30,260 Q160,320 320,180 T560,270" stroke="rgba(255, 255, 255, 0.26)" stroke-width="2" />
+            <path d="M30,-10 Q200,90 350,10 T530,140" stroke="rgba(255, 255, 255, 0.28)" stroke-width="2" />
+            <path d="M-40,340 Q150,250 310,360 T560,280" stroke="rgba(255, 255, 255, 0.24)" stroke-width="1.8" />
           </svg>
 
           <div class="promo-text-wrap">
@@ -116,10 +128,11 @@
               MAKHANA
             </h3>
 
-            <div class="promo-tagline">
-              YOUR CHOSEN FAMILY.<br>
-              YOUR WORLD. PEOPLE<br>
-              WHO GET YOU.
+            <div class="promo-footer-wrap">
+              <button type="button" class="promo-theme-btn" data-promo="makhana" aria-label="View Makhana details">
+                <span>View Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
             </div>
           </div>
 
@@ -147,9 +160,11 @@
               PUFFS
             </h3>
 
-            <div class="promo-tagline">
-              FOR THOSE WHO KNOW<br>
-              WHAT THEY WANT.
+            <div class="promo-footer-wrap">
+              <button type="button" class="promo-theme-btn" data-promo="jowar" aria-label="View Jowar Puffs details">
+                <span>View Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
             </div>
           </div>
 
@@ -168,24 +183,96 @@
        PRODUCT CATALOG & FLAVOR EXPLORER
        ========================================================================== -->
   <section class="catalog-section" id="catalogSection">
+    <!-- Ambient Culinary Glows -->
+    <div class="catalog-ambient-glow" aria-hidden="true">
+      <div class="glow-orb glow-orb-1"></div>
+      <div class="glow-orb glow-orb-2"></div>
+    </div>
+
     <div class="container">
-      <div class="section-header">
-        <span class="section-subtitle"><i class="fa-solid fa-sparkles"></i> Gourmet Pantry Selection</span>
-        <h2 class="section-title">Explore Our <span class="highlight-gradient">Roasted Flavours</span></h2>
-        <p class="section-desc">100% slow-roasted superfoods seasoned with authentic spices. Never fried, zero palm oil.
+      <div class="section-header catalog-rich-header">
+        
+        <!-- Showstopper Headline with Handcrafted Wave Underline -->
+        <div class="catalog-title-wrapper">
+          <!-- Floating side accent sticker -->
+          <span class="catalog-side-sticker sticker-left">
+            <i class="fa-solid fa-seedling"></i> Zero Palm Oil
+          </span>
+
+          <h2 class="section-title catalog-main-title">
+            Explore Our 
+            <span class="artisan-gradient-word">
+              Roasted Flavours
+              <svg class="handcrafted-underline-svg" viewBox="0 0 280 18" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M4 13C52 4 116 3 168 7C206 10 248 14 276 9" stroke="url(#flavourStrokeGrad)" stroke-width="5" stroke-linecap="round"/>
+                <circle cx="276" cy="9" r="4" fill="#ED681C" />
+                <defs>
+                  <linearGradient id="flavourStrokeGrad" x1="4" y1="9" x2="276" y2="9" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ED681C" />
+                    <stop offset="1" stop-color="#FC947F" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+          </h2>
+
+          <span class="catalog-side-sticker sticker-right">
+            <i class="fa-solid fa-sparkles"></i> 10 Craft Batches
+          </span>
+        </div>
+
+        <!-- Enhanced Description -->
+        <p class="section-desc catalog-desc">
+          Slow-roasted superfoods tossed in authentic stone-ground spices. Never deep fried, 0% palm oil, guaranteed crispy crunch in every bite.
         </p>
+
+        <!-- Interactive Pantry Perks Strip -->
+        <div class="pantry-perks-strip">
+          <div class="perk-chip">
+            <span class="perk-icon"><i class="fa-solid fa-fire"></i></span>
+            <span class="perk-label">Slow Fire-Roasted</span>
+          </div>
+          <div class="perk-divider">•</div>
+          <div class="perk-chip">
+            <span class="perk-icon"><i class="fa-solid fa-heart-pulse"></i></span>
+            <span class="perk-label">0% Palm Oil &amp; Trans Fat</span>
+          </div>
+          <div class="perk-divider">•</div>
+          <div class="perk-chip">
+            <span class="perk-icon"><i class="fa-solid fa-mortar-pestle"></i></span>
+            <span class="perk-label">Artisan Spice Blends</span>
+          </div>
+          <div class="perk-divider">•</div>
+          <div class="perk-chip">
+            <span class="perk-icon"><i class="fa-solid fa-wheat-awn"></i></span>
+            <span class="perk-label">Fibre-Rich Jowar &amp; Makhana</span>
+          </div>
+        </div>
+
       </div>
 
       <!-- Category Filter Pills -->
       <div class="catalog-filter-bar">
         <button class="filter-btn active" data-filter="all">
-          <i class="fa-solid fa-fire-flame-curved"></i> All Snacks <span class="filter-count">10</span>
-        </button>
-        <button class="filter-btn" data-filter="jowar">
-          <i class="fa-solid fa-wheat-awn"></i> Jowar Puffs • ₹90 <span class="filter-count">5</span>
+          <i class="fa-solid fa-fire-flame-curved"></i> All Snacks <span class="filter-count">19</span>
         </button>
         <button class="filter-btn" data-filter="makhana">
-          <i class="fa-solid fa-seedling"></i> Roasted Makhana • ₹180 <span class="filter-count">5</span>
+          <i class="fa-solid fa-seedling"></i> Makhana <span class="filter-count">7</span>
+        </button>
+        <button class="filter-btn" data-filter="jowar">
+          <i class="fa-solid fa-wheat-awn"></i> Jowar Puff <span class="filter-count">5</span>
+        </button>
+        <button class="filter-btn" data-filter="millet">
+          <i class="fa-solid fa-bowl-rice"></i> Millet Namkeen <span class="filter-count">1</span>
+        </button>
+        <button class="filter-btn" data-filter="chips">
+          <i class="fa-solid fa-cookie-bite"></i> Whole Grain Chips <span class="filter-count">3</span>
+        </button>
+        <button class="filter-btn" data-filter="ragi">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Ragi Stix <span class="filter-count">2</span>
+        </button>
+        <button class="filter-btn" data-filter="trial">
+          <i class="fa-solid fa-box-open"></i> Trial Pack <span class="filter-count">1</span>
         </button>
       </div>
 
@@ -597,6 +684,366 @@
           </div>
         </div>
 
+        <!-- Product 11: Millet Namkeen Standy Pouch -->
+        <div class="product-card snack-interactive-card" data-category="millet">
+          <div class="snack-stage-box" style="--stage-bg: #F4F8EC;">
+            <div class="snack-pouch-layer">
+              <div class="snack-burst-layer">
+                <img src="media/Images/burst_jowar_puffs.png" alt="Bursting Millet Namkeen" class="burst-flock-img" loading="lazy">
+                <div class="snack-particles-cloud">
+                  <span class="fly-particle fp-1"></span>
+                  <span class="fly-particle fp-2"></span>
+                  <span class="fly-particle fp-3"></span>
+                </div>
+              </div>
+              <img src="media/Images/Product Image/millet_namkeen.png" alt="Roasted Millet Namkeen Mixture" class="snack-pouch-img" loading="lazy">
+            </div>
+            <button class="stage-quick-pill btn-add-cart" 
+                    data-id="millet-namkeen" 
+                    data-name="Roasted Millet Namkeen" 
+                    data-price="120" 
+                    data-img="media/Images/Product Image/millet_namkeen.png" 
+                    title="Add to Cart">
+              <i class="fa-solid fa-plus"></i> Quick Add
+            </button>
+          </div>
+          <div class="snack-details-box">
+            <span class="snack-category-tag">MILLET NAMKEEN</span>
+            <h3 class="snack-item-name">Millet Namkeen</h3>
+            <div class="snack-price-row">
+              <span class="snack-price-val">From ₹ 120</span>
+              <button class="snack-add-icon-btn btn-add-cart" 
+                      data-id="millet-namkeen" 
+                      data-name="Roasted Millet Namkeen" 
+                      data-price="120" 
+                      data-img="media/Images/Product Image/millet_namkeen.png" 
+                      title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 12: Whole Grain Chips - Barbeque -->
+        <div class="product-card snack-interactive-card" data-category="chips">
+          <div class="snack-stage-box" style="--stage-bg: #FFF0E6;">
+            <div class="snack-pouch-layer">
+              <div class="snack-burst-layer">
+                <img src="media/Images/burst_jowar_puffs.png" alt="Bursting Whole Grain Chips" class="burst-flock-img" loading="lazy">
+                <div class="snack-particles-cloud">
+                  <span class="fly-particle fp-1"></span>
+                  <span class="fly-particle fp-2"></span>
+                  <span class="fly-particle fp-3"></span>
+                </div>
+              </div>
+              <img src="media/Images/Product Image/chips_barbeque.png" alt="Whole Grain Chips Barbeque" class="snack-pouch-img" loading="lazy">
+            </div>
+            <button class="stage-quick-pill btn-add-cart" 
+                    data-id="chips-bbq" 
+                    data-name="Whole Grain Chips - Barbeque" 
+                    data-price="110" 
+                    data-img="media/Images/Product Image/chips_barbeque.png" 
+                    title="Add to Cart">
+              <i class="fa-solid fa-plus"></i> Quick Add
+            </button>
+          </div>
+          <div class="snack-details-box">
+            <span class="snack-category-tag">WHOLE GRAIN CHIPS</span>
+            <h3 class="snack-item-name">Barbeque Chips</h3>
+            <div class="snack-price-row">
+              <span class="snack-price-val">From ₹ 110</span>
+              <button class="snack-add-icon-btn btn-add-cart" 
+                      data-id="chips-bbq" 
+                      data-name="Whole Grain Chips - Barbeque" 
+                      data-price="110" 
+                      data-img="media/Images/Product Image/chips_barbeque.png" 
+                      title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 13: Whole Grain Chips - Buttery Cheese -->
+        <div class="product-card snack-interactive-card" data-category="chips">
+          <div class="snack-stage-box" style="--stage-bg: #FFF9E6;">
+            <div class="snack-pouch-layer">
+              <div class="snack-burst-layer">
+                <img src="media/Images/burst_jowar_puffs.png" alt="Bursting Whole Grain Chips" class="burst-flock-img" loading="lazy">
+                <div class="snack-particles-cloud">
+                  <span class="fly-particle fp-1"></span>
+                  <span class="fly-particle fp-2"></span>
+                  <span class="fly-particle fp-3"></span>
+                </div>
+              </div>
+              <img src="media/Images/Product Image/chips_buttery_cheese.png" alt="Whole Grain Chips Buttery Cheese" class="snack-pouch-img" loading="lazy">
+            </div>
+            <button class="stage-quick-pill btn-add-cart" 
+                    data-id="chips-cheese" 
+                    data-name="Whole Grain Chips - Buttery Cheese" 
+                    data-price="110" 
+                    data-img="media/Images/Product Image/chips_buttery_cheese.png" 
+                    title="Add to Cart">
+              <i class="fa-solid fa-plus"></i> Quick Add
+            </button>
+          </div>
+          <div class="snack-details-box">
+            <span class="snack-category-tag">WHOLE GRAIN CHIPS</span>
+            <h3 class="snack-item-name">Buttery Cheese Chips</h3>
+            <div class="snack-price-row">
+              <span class="snack-price-val">From ₹ 110</span>
+              <button class="snack-add-icon-btn btn-add-cart" 
+                      data-id="chips-cheese" 
+                      data-name="Whole Grain Chips - Buttery Cheese" 
+                      data-price="110" 
+                      data-img="media/Images/Product Image/chips_buttery_cheese.png" 
+                      title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 14: Whole Grain Chips - Jalapeno -->
+        <div class="product-card snack-interactive-card" data-category="chips">
+          <div class="snack-stage-box" style="--stage-bg: #F0FAF0;">
+            <div class="snack-pouch-layer">
+              <div class="snack-burst-layer">
+                <img src="media/Images/burst_jowar_puffs.png" alt="Bursting Whole Grain Chips" class="burst-flock-img" loading="lazy">
+                <div class="snack-particles-cloud">
+                  <span class="fly-particle fp-1"></span>
+                  <span class="fly-particle fp-2"></span>
+                  <span class="fly-particle fp-3"></span>
+                </div>
+              </div>
+              <img src="media/Images/Product Image/chips_jalapeno.png" alt="Whole Grain Chips Jalapeno" class="snack-pouch-img" loading="lazy">
+            </div>
+            <button class="stage-quick-pill btn-add-cart" 
+                    data-id="chips-jalapeno" 
+                    data-name="Whole Grain Chips - Jalapeno" 
+                    data-price="110" 
+                    data-img="media/Images/Product Image/chips_jalapeno.png" 
+                    title="Add to Cart">
+              <i class="fa-solid fa-plus"></i> Quick Add
+            </button>
+          </div>
+          <div class="snack-details-box">
+            <span class="snack-category-tag">WHOLE GRAIN CHIPS</span>
+            <h3 class="snack-item-name">Jalapeno Chips</h3>
+            <div class="snack-price-row">
+              <span class="snack-price-val">From ₹ 110</span>
+              <button class="snack-add-icon-btn btn-add-cart" 
+                      data-id="chips-jalapeno" 
+                      data-name="Whole Grain Chips - Jalapeno" 
+                      data-price="110" 
+                      data-img="media/Images/Product Image/chips_jalapeno.png" 
+                      title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 15: Ragi Stix - Chocolate -->
+        <div class="product-card snack-interactive-card" data-category="ragi">
+          <div class="snack-stage-box" style="--stage-bg: #F5EEF8;">
+            <div class="snack-pouch-layer">
+              <div class="snack-burst-layer">
+                <img src="media/Images/burst_jowar_puffs.png" alt="Bursting Ragi Stix" class="burst-flock-img" loading="lazy">
+                <div class="snack-particles-cloud">
+                  <span class="fly-particle fp-1"></span>
+                  <span class="fly-particle fp-2"></span>
+                  <span class="fly-particle fp-3"></span>
+                </div>
+              </div>
+              <img src="media/Images/Product Image/ragi_chocolate.png" alt="Ragi Stix Chocolate" class="snack-pouch-img" loading="lazy">
+            </div>
+            <button class="stage-quick-pill btn-add-cart" 
+                    data-id="ragi-choc" 
+                    data-name="Ragi Stix - Chocolate" 
+                    data-price="99" 
+                    data-img="media/Images/Product Image/ragi_chocolate.png" 
+                    title="Add to Cart">
+              <i class="fa-solid fa-plus"></i> Quick Add
+            </button>
+          </div>
+          <div class="snack-details-box">
+            <span class="snack-category-tag">RAGI STIX</span>
+            <h3 class="snack-item-name">Ragi Stix Chocolate</h3>
+            <div class="snack-price-row">
+              <span class="snack-price-val">From ₹ 99</span>
+              <button class="snack-add-icon-btn btn-add-cart" 
+                      data-id="ragi-choc" 
+                      data-name="Ragi Stix - Chocolate" 
+                      data-price="99" 
+                      data-img="media/Images/Product Image/ragi_chocolate.png" 
+                      title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 16: Ragi Stix - Masala -->
+        <div class="product-card snack-interactive-card" data-category="ragi">
+          <div class="snack-stage-box" style="--stage-bg: #FEF3E8;">
+            <div class="snack-pouch-layer">
+              <div class="snack-burst-layer">
+                <img src="media/Images/burst_jowar_puffs.png" alt="Bursting Ragi Stix" class="burst-flock-img" loading="lazy">
+                <div class="snack-particles-cloud">
+                  <span class="fly-particle fp-1"></span>
+                  <span class="fly-particle fp-2"></span>
+                  <span class="fly-particle fp-3"></span>
+                </div>
+              </div>
+              <img src="media/Images/Product Image/ragi_masala.png" alt="Ragi Stix Masala" class="snack-pouch-img" loading="lazy">
+            </div>
+            <button class="stage-quick-pill btn-add-cart" 
+                    data-id="ragi-masala" 
+                    data-name="Ragi Stix - Masala" 
+                    data-price="99" 
+                    data-img="media/Images/Product Image/ragi_masala.png" 
+                    title="Add to Cart">
+              <i class="fa-solid fa-plus"></i> Quick Add
+            </button>
+          </div>
+          <div class="snack-details-box">
+            <span class="snack-category-tag">RAGI STIX</span>
+            <h3 class="snack-item-name">Ragi Stix Masala</h3>
+            <div class="snack-price-row">
+              <span class="snack-price-val">From ₹ 99</span>
+              <button class="snack-add-icon-btn btn-add-cart" 
+                      data-id="ragi-masala" 
+                      data-name="Ragi Stix - Masala" 
+                      data-price="99" 
+                      data-img="media/Images/Product Image/ragi_masala.png" 
+                      title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 17: Trial Pack (5 Healthy Snacks) -->
+        <div class="product-card snack-interactive-card" data-category="trial">
+          <div class="snack-stage-box" style="--stage-bg: #FFF3E0;">
+            <div class="snack-pouch-layer">
+              <div class="snack-burst-layer">
+                <img src="media/Images/burst_makhana_seeds.png" alt="Bursting Snacks" class="burst-flock-img" loading="lazy">
+                <div class="snack-particles-cloud">
+                  <span class="fly-particle fp-1"></span>
+                  <span class="fly-particle fp-2"></span>
+                  <span class="fly-particle fp-3"></span>
+                </div>
+              </div>
+              <img src="media/Images/Product Image/trial_pack.png" alt="Trial Pack 5 Healthy Snacks" class="snack-pouch-img" loading="lazy">
+            </div>
+            <button class="stage-quick-pill btn-add-cart" 
+                    data-id="trial-pack-5" 
+                    data-name="Trial Pack (5 Healthy Snacks)" 
+                    data-price="299" 
+                    data-img="media/Images/Product Image/trial_pack.png" 
+                    title="Add to Cart">
+              <i class="fa-solid fa-plus"></i> Quick Add
+            </button>
+          </div>
+          <div class="snack-details-box">
+            <span class="snack-category-tag">SPECIAL SAMPLER</span>
+            <h3 class="snack-item-name">Trial Pack (5 Snacks)</h3>
+            <div class="snack-price-row">
+              <span class="snack-price-val">From ₹ 299</span>
+              <button class="snack-add-icon-btn btn-add-cart" 
+                      data-id="trial-pack-5" 
+                      data-name="Trial Pack (5 Healthy Snacks)" 
+                      data-price="299" 
+                      data-img="media/Images/Product Image/trial_pack.png" 
+                      title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 18: Makhana Sour Cream & Onion -->
+        <div class="product-card snack-interactive-card" data-category="makhana">
+          <div class="snack-stage-box" style="--stage-bg: #E8F5E9;">
+            <div class="snack-pouch-layer">
+              <div class="snack-burst-layer">
+                <img src="media/Images/burst_makhana_seeds.png" alt="Bursting Roasted Makhana" class="burst-flock-img" loading="lazy">
+                <div class="snack-particles-cloud">
+                  <span class="fly-particle fp-1"></span>
+                  <span class="fly-particle fp-2"></span>
+                  <span class="fly-particle fp-3"></span>
+                </div>
+              </div>
+              <img src="media/Images/Product Image/makhana_sour_cream.png" alt="Makhana Sour Cream & Onion" class="snack-pouch-img" loading="lazy">
+            </div>
+            <button class="stage-quick-pill btn-add-cart" 
+                    data-id="makhana-sour-cream" 
+                    data-name="Makhana - Sour Cream & Onion" 
+                    data-price="180" 
+                    data-img="media/Images/Product Image/makhana_sour_cream.png" 
+                    title="Add to Cart">
+              <i class="fa-solid fa-plus"></i> Quick Add
+            </button>
+          </div>
+          <div class="snack-details-box">
+            <span class="snack-category-tag">MAKHANA</span>
+            <h3 class="snack-item-name">Sour Cream &amp; Onion</h3>
+            <div class="snack-price-row">
+              <span class="snack-price-val">From ₹ 180</span>
+              <button class="snack-add-icon-btn btn-add-cart" 
+                      data-id="makhana-sour-cream" 
+                      data-name="Makhana - Sour Cream & Onion" 
+                      data-price="180" 
+                      data-img="media/Images/Product Image/makhana_sour_cream.png" 
+                      title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 19: Makhana Thai Sweet Chilli -->
+        <div class="product-card snack-interactive-card" data-category="makhana">
+          <div class="snack-stage-box" style="--stage-bg: #FBE9E7;">
+            <div class="snack-pouch-layer">
+              <div class="snack-burst-layer">
+                <img src="media/Images/burst_makhana_seeds.png" alt="Bursting Roasted Makhana" class="burst-flock-img" loading="lazy">
+                <div class="snack-particles-cloud">
+                  <span class="fly-particle fp-1"></span>
+                  <span class="fly-particle fp-2"></span>
+                  <span class="fly-particle fp-3"></span>
+                </div>
+              </div>
+              <img src="media/Images/Product Image/makhana_sweet_chilli.png" alt="Makhana Thai Sweet Chilli" class="snack-pouch-img" loading="lazy">
+            </div>
+            <button class="stage-quick-pill btn-add-cart" 
+                    data-id="makhana-thai-chilli" 
+                    data-name="Makhana - Thai Sweet Chilli" 
+                    data-price="180" 
+                    data-img="media/Images/Product Image/makhana_sweet_chilli.png" 
+                    title="Add to Cart">
+              <i class="fa-solid fa-plus"></i> Quick Add
+            </button>
+          </div>
+          <div class="snack-details-box">
+            <span class="snack-category-tag">MAKHANA</span>
+            <h3 class="snack-item-name">Thai Sweet Chilli</h3>
+            <div class="snack-price-row">
+              <span class="snack-price-val">From ₹ 180</span>
+              <button class="snack-add-icon-btn btn-add-cart" 
+                      data-id="makhana-thai-chilli" 
+                      data-name="Makhana - Thai Sweet Chilli" 
+                      data-price="180" 
+                      data-img="media/Images/Product Image/makhana_sweet_chilli.png" 
+                      title="Add to Cart">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -874,6 +1321,21 @@
 
     </div>
   </footer>
+ 
+  <!-- ==========================================================================
+       PROMO PRODUCT DETAILS POPUP MODAL
+       ========================================================================== -->
+  <div class="promo-modal-backdrop" id="promoDetailsModal" aria-hidden="true">
+    <div class="promo-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="promoModalTitle">
+      <button type="button" class="promo-modal-close" id="promoModalCloseBtn" aria-label="Close details popup">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="promo-modal-content" id="promoModalDynamicContent">
+        <!-- Injected via JavaScript dynamically based on button clicked -->
+      </div>
+    </div>
+  </div>
 
   <!-- Lenis Smooth Scroll Engine -->
   <script src="media/js/lenis.min.js"></script>

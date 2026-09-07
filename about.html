@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Roast Foods | How We Craft Our Roasted Superfoods</title>
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="media/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="media/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="media/favicon/apple-icon-180x180.png">
+  <link rel="manifest" href="media/favicon/manifest.json">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="media/css/lenis.css">
+  <link rel="stylesheet" href="media/css/style.css">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Main Header & Navigation -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" id="mainBrandLogo">
+        <img src="media/Images/logo.png" alt="Roast Foods — Roasted, Not Fried" class="brand-logo-img">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li class="nav-dropdown-wrapper">
+          <a href="index.html#catalogSection" class="nav-link nav-dropdown-trigger" id="shopNavDropdownBtn" aria-haspopup="true" aria-expanded="false">
+            Shop <i class="fa-solid fa-chevron-down nav-chevron-icon"></i>
+          </a>
+          <div class="nav-dropdown-menu" id="shopDropdownMenu">
+            <a href="index.html?filter=makhana#catalogSection" class="dropdown-item" data-filter-select="makhana">Makhana</a>
+            <a href="index.html?filter=jowar#catalogSection" class="dropdown-item" data-filter-select="jowar">Jowar Puff</a>
+            <a href="index.html?filter=millet#catalogSection" class="dropdown-item" data-filter-select="millet">Millet Namkeen</a>
+            <a href="index.html?filter=chips#catalogSection" class="dropdown-item" data-filter-select="chips">Whole Grain Chips</a>
+            <a href="index.html?filter=ragi#catalogSection" class="dropdown-item" data-filter-select="ragi">Ragi Stix</a>
+            <a href="index.html?filter=trial#catalogSection" class="dropdown-item" data-filter-select="trial">Trial Pack</a>
+          </div>
+        </li>
+        <li><a href="#mainFooter" class="nav-link">Find Us</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn-icon" data-cart-toggle aria-label="View Cart" id="cartHeaderBtn">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count-badge">3</span>
+        </button>
+        <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       ABOUT US HERO BANNER (RESPONSIVE ART DIRECTION)
+       Sizes: 1920x880 (Desktop), 1000px (Tablet), 600x600 (Mobile), 400x400 (Small Mobile)
+       ========================================================================== -->
+  <section class="about-hero-section" id="aboutHeroSection">
+    <div class="about-hero-banner-wrap">
+      <!-- Responsive Picture Element (Switches dynamically per screen size) -->
+      <picture class="about-hero-picture">
+        <!-- 1920x880 for Large & Desktop Screens (min-width: 1001px) -->
+        <source media="(min-width: 1001px)" srcset="media/Images/about/banner/about-us.webp">
+        <!-- 1000x1000 for Medium / Tablet Screens (min-width: 601px to 1000px) -->
+        <source media="(min-width: 601px)" srcset="media/Images/about/banner/banner-md.webp">
+        <!-- 600x600 for Mobile Landscape / Standard Mobile (min-width: 401px to 600px) -->
+        <source media="(min-width: 401px)" srcset="media/Images/about/banner/banner-sm.webp">
+        <!-- 400x400 for Small Mobile Screens (max-width: 400px) -->
+        <img src="media/Images/about/banner/banner-xs.webp" alt="Roast Foods - How We Craft Our Roasted Superfoods" class="about-hero-img" width="1920" height="880">
+      </picture>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       WHO WE ARE - MINIMAL EDITORIAL SHOWCASE (MATCHING USER'S REFERENCE)
+       Clean Split Header & Cinematic Team Banner | Minimal Orange
+       ========================================================================== -->
+  <section class="who-we-are-section" id="whoWeAreSection">
+    <div class="container">
+
+      <!-- Top Header: Split 2-Column Row (Left Title / Right Text) -->
+      <div class="who-ref-header">
+        <div class="who-ref-title-col">
+          <h2 class="who-ref-main-title">
+            Who We Are
+          </h2>
+        </div>
+
+        <div class="who-ref-desc-col">
+          <p class="who-ref-desc-text">
+            We are on a mission to make snacking healthy and with great taste! Since we can't keep our hands off of delectable munchies, why not reap some benefits out of them too? We are devoted snackers, who against all odds, decided to innovate snacking alternatives...and voila!
+          </p>
+          <p class="who-ref-desc-text">
+            Our range of snacking are made with the goodness of ancient grains with a range of flavours while avoiding artificial colours and preservatives. To make it even more heavenly, all our products are roasted not fried. Also, did we mention that our range is completely gluten-free? That's right! Now no one can give you that guilty look when you binge on your favourite Roast Foods munchies.
+          </p>
+          <div class="who-ref-socials">
+            <a href="#" class="who-social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="who-social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="who-social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Large Cinematic Photo Banner -->
+      <div class="who-ref-image-wrap">
+        <img src="media/Images/about/who_we_are_team.jpg" alt="Roast Foods Artisan Team Collaborating" class="who-ref-image" loading="lazy" width="1920" height="1080">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       THE FOUNDER'S JOURNEY (EDITORIAL STORY - NO CARDS)
+       ========================================================================== -->
+  <section class="founder-section" id="founderSection">
+    <div class="container">
+      
+      <!-- Top Minimal Narrative Kicker -->
+      <div class="founder-header-flow">
+        <div class="founder-badge">
+          <i class="fa-solid fa-feather-pointed"></i>
+          <span>FOUNDER'S STORY</span>
+        </div>
+        <h2 class="founder-headline">
+          The Story Behind <span class="founder-headline-highlight">Roast Foods</span>
+        </h2>
+      </div>
+
+      <div class="founder-editorial-layout">
+
+        <!-- Left Column: Arched Artistic Portrait & Bio -->
+        <div class="founder-portrait-column">
+          <div class="founder-arch-wrapper">
+            <div class="founder-arch-ring" aria-hidden="true"></div>
+            <div class="founder-arch-inner">
+              <img src="media/Images/about/founder_soniya.png" alt="Soniya Raisoni - Founder of Roast Foods" class="founder-arch-img" loading="lazy" width="264" height="456">
+            </div>
+          </div>
+
+          <div class="founder-identity">
+            <h3 class="founder-full-name">Soniya Raisoni</h3>
+            <p class="founder-designation">Founder</p>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="founder-social-pill" aria-label="Connect with Soniya Raisoni on LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+              <span>Connect on LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Exact Founder Narrative (NO CARDS, PURE USER CONTENT) -->
+        <div class="founder-narrative-column">
+          <div class="founder-story-paragraphs">
+            <p>Hey everyone! I am Soniya, the founder of Roast Foods, and a very conscious eater. Today’s on the go lifestyle has forced many to munch on fried snacks made from ingredients with little or no nutritional value.</p>
+            <p>My work life made me fall for this junk culture too. With time my snacking obsession made me feel guilty, but also made me realize the lack of better options available. I started researching plant-based seeds and ancient grains from which snacks could be made in a modern avatar. This is how Roast Foods was born!</p>
+            <p>With some trials, testing, and countless recipes, we can now provide you with lip-smacking snacks made with nutritious ingredients. Now that’s what we call “Smart Snacking.”</p>
+            <p class="founder-signature-paragraph">Our snacks are Roasted, Not Fried and packed with love for all you snackers. It’s time you serve your body with the good stuff!</p>
+          </div>
+
+          <!-- Handwritten Signature placed right above the Founder role text -->
+          <div class="founder-signature-block">
+            <span class="founder-signature-hand">Soniya Raisoni</span>
+            <span class="founder-signature-role">Founder, Roast Foods</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CUSTOMER REVIEWS & SOCIAL PROOF (HAPPY CUSTOMERS SHOWCASE)
+       ========================================================================== -->
+  <section class="reviews-section snack-showcase-section" id="reviewsSection">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="snack-reviews-header">
+        <h2 class="snack-reviews-title">
+          What our happy Customers <br>
+          <span class="snack-title-gradient">have to say !</span>
+        </h2>
+      </div>
+
+      <!-- 3 Vibrant Snack Brand Review Cards -->
+      <div class="snack-cards-grid">
+
+        <!-- Card 1: Sonia Shenoy (Sunset Terracotta / Schezwan Passion) -->
+        <div class="snack-review-card card-terracotta">
+          <div class="card-top-bar">
+            <span class="snack-flavor-tag tag-terracotta">
+              <i class="fa-solid fa-pepper-hot"></i> Fave: Schezwan Makhana
+            </span>
+            <div class="card-rating-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+
+          <div class="card-quote-wrapper">
+            <div class="card-quote-mark">“</div>
+            <p class="snack-quote-text">
+              Roast Foods is my go to place for all healthy snacking options. My family and me snack on Roast Foods Makhana and Jowar Puffs almost daily and we love how the products taste clean, chemical free and super yummy. My personal favourite is the <strong>Schezwan and Sour Cream Makhana</strong> and my son loves all the Jowar Puff flavours. Also as someone, who is a bit obsessed with health, this is a perfect combination of taste and health. All the best Soniya, more power to you and your vision!
+            </p>
+          </div>
+
+          <div class="card-author-footer">
+            <div class="author-photo-box">
+              <img src="media/Images/Testimonials/person1.jpg" alt="Sonia Shenoy" class="author-photo">
+            </div>
+            <div class="author-details">
+              <h4 class="author-name">Sonia Shenoy</h4>
+              <p class="author-title">Senior Editor, CNBC-TV18</p>
+            </div>
+            <div class="author-badge-box badge-media">
+              <i class="fa-solid fa-tv"></i>
+              <span>CNBC TV18</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Shweta Katariya Modi (Golden Roasted Honey - Featured Mom's Choice) -->
+        <div class="snack-review-card card-honey featured-card">
+          <div class="featured-ribbon">
+            <i class="fa-solid fa-crown"></i> MOM'S TOP PICK
+          </div>
+
+          <div class="card-top-bar">
+            <span class="snack-flavor-tag tag-honey">
+              <i class="fa-solid fa-shield-heart"></i> Fave: Cheese &amp; Parsley
+            </span>
+            <div class="card-rating-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+
+          <div class="card-quote-wrapper">
+            <div class="card-quote-mark">“</div>
+            <p class="snack-quote-text">
+              My family's &amp; my favourite snack option that's healthy and tasty. As a mother I am never worried when I hear the crackled packet sounds, as I know my kids are on to a healthy snack as I have <strong>replaced fried unhealthy snacks with roasted ones</strong>. My kids favourite are the <strong>Cheese &amp; Parsley Makhana's</strong> and <strong>Indian Spices Jowar Puffs</strong>. They are regulars in their school tiffin, vacation and even playdates. It's also a great gifting option. I have personally gifted these to my friends and family and they have not only loved it but it's now a regular on their grocery list. Thank you for the giving us a healthy, hygienically made, tasty and affordable snack option. Goodluck to the Team for all future endeavours!
+            </p>
+          </div>
+
+          <div class="card-author-footer">
+            <div class="author-photo-box">
+              <img src="media/Images/Testimonials/person2.jpg" alt="Shweta Katariya Modi" class="author-photo">
+            </div>
+            <div class="author-details">
+              <h4 class="author-name">Shweta Katariya Modi</h4>
+              <p class="author-title">Founder, The Earth School</p>
+            </div>
+            <div class="author-badge-box badge-earth">
+              <i class="fa-solid fa-school"></i>
+              <span>The Earth School</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Gourmet.palette (Fresh Garden Herb / Pistachio Connoisseur) -->
+        <div class="snack-review-card card-matcha">
+          <div class="card-top-bar">
+            <span class="snack-flavor-tag tag-matcha">
+              <i class="fa-solid fa-wheat-awn"></i> Fave: Roasted Jowar Puffs
+            </span>
+            <div class="card-rating-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+
+          <div class="card-quote-wrapper">
+            <div class="card-quote-mark">“</div>
+            <p class="snack-quote-text">
+              My love for snacking and Jowar Puffs me to try this new brand which I'm sure many can find it now in most of the super markets! Made from Jowar this pack of puffs is filled not just with flavours but also with nutrients. Its <strong>gluten free, cholesterol free, rich in fiber and zero trans fat</strong> this snacking is clearly the best Jowar Puffs I've eaten! Mindful snacking at it's best.
+            </p>
+          </div>
+
+          <div class="card-author-footer">
+            <div class="author-photo-box">
+              <img src="media/Images/Testimonials/person3.jpg" alt="Gourmet.palette" class="author-photo">
+            </div>
+            <div class="author-details">
+              <h4 class="author-name">Gourmet.palette</h4>
+              <p class="author-title">Food Blogger &amp; Connoisseur</p>
+            </div>
+            <div class="author-badge-box badge-foodie">
+              <i class="fa-solid fa-utensils"></i>
+              <span>Food Blogger</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BURRITO MADRE INSPIRED SHOWSTOPPER FOOTER
+       ========================================================================== -->
+  <footer class="burrito-footer" id="mainFooter">
+    <!-- SVG Topographic Contour Lines Overlay -->
+    <div class="burrito-contour-lines" aria-hidden="true">
+      <svg viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M-100 120 C 300 40, 600 240, 1000 80 C 1200 -20, 1400 180, 1600 100" stroke="rgba(255,255,255,0.07)" stroke-width="2" />
+        <path d="M-100 240 C 200 160, 500 380, 900 220 C 1200 100, 1350 320, 1600 220" stroke="rgba(255,255,255,0.06)" stroke-width="2" />
+        <path d="M-100 380 C 350 300, 700 500, 1100 340 C 1300 260, 1450 420, 1600 360" stroke="rgba(255,255,255,0.05)" stroke-width="2" />
+        <path d="M-100 500 C 400 420, 800 580, 1200 460 C 1400 400, 1500 520, 1600 480" stroke="rgba(255,255,255,0.05)" stroke-width="2" />
+      </svg>
+    </div>
+
+    <div class="burrito-footer-inner">
+      <div class="container">
+
+        <!-- Upper Editorial Grid -->
+        <div class="burrito-top-grid">
+
+          <!-- Left Column: Brand Logo & Tagline -->
+          <div class="burrito-col-brand">
+            <a href="#" class="burrito-logo-link">
+              <img src="media/Images/logo.png" alt="Roast Foods" class="burrito-logo-img">
+            </a>
+            <p class="burrito-brand-desc">
+              Pioneering 100% slow-roasted lotus seed superfoods across India. Clean, guilt-free everyday crunch.
+            </p>
+          </div>
+
+          <!-- Nav Column 1: Menu & Story -->
+          <div class="burrito-col-nav">
+            <ul class="burrito-nav-links">
+              <li><a href="#catalogSection">MENU</a></li>
+              <li><a href="#catalogSection">OUR SNACKS</a></li>
+              <li><a href="#catalogSection">ROASTED MAKHANA</a></li>
+              <li><a href="#catalogSection">JOWAR PUFFS</a></li>
+              <li><a href="#storySection">ABOUT US</a></li>
+              <li><a href="#storySection">ROASTERY TEAM</a></li>
+              <li><a href="#reviewsSection">REVIEWS</a></li>
+              <li><a href="#catalogSection">CUSTOM BOX</a></li>
+            </ul>
+          </div>
+
+          <!-- Nav Column 2: Legal & Pill CTA -->
+          <div class="burrito-col-nav">
+            <a href="#catalogSection" class="burrito-pill-cta">SHOP NOW</a>
+            <ul class="burrito-nav-links">
+              <li><a href="#">FAQ</a></li>
+              <li><a href="mailto:care@roastfoods.com">CONTACT</a></li>
+              <li><a href="#">TERMS OF BUSINESS</a></li>
+              <li><a href="#">PRIVACY POLICY &amp; COOKIES</a></li>
+              <li><a href="#">NEWSLETTER</a></li>
+              <li><a href="#">FSSAI CERTIFICATION</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Social & Country Badges -->
+          <div class="burrito-col-social">
+            <div class="burrito-social-icons">
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <p class="burrito-copyright">
+              &copy; Roast Foods 2026.<br>All rights reserved.
+            </p>
+            <div class="burrito-badges-row">
+              <span class="burrito-flag-pill" title="Made in India">🇮🇳 INDIA</span>
+              <span class="burrito-flag-pill" title="100% Vegetarian">🌿 100% VEG</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Giant Edge-to-Edge Typography Banner (Burrito Madre Style) -->
+      <div class="burrito-giant-brand-wrap">
+        <h1 class="burrito-giant-brand">
+          <span class="giant-word-orange">ROAST</span>
+          <span class="giant-word-red">FOODS</span>
+        </h1>
+        <!-- Floating Stamp Sticker (Bottom Left) -->
+        <div class="burrito-floating-sticker" title="100% Air Roasted">
+          <i class="fa-solid fa-fire-burner"></i>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Lenis Smooth Scroll Engine -->
+  <script src="media/js/lenis.min.js"></script>
+  <script src="media/js/app.js"></script>
+</body>
+
+</html>

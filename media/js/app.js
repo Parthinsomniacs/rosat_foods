@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const filter = btn.dataset.filter;
       productCards.forEach(card => {
-        const category = card.dataset.category;
+        const category = card.dataset.category || '';
         if (filter === 'all' || category.includes(filter)) {
           card.style.display = 'flex';
         } else {
@@ -597,6 +597,177 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initMakhanaSimpleTilt();
+
+  // ==========================================================================
+  // 8. PROMO DETAILS POPUP MODAL CONTROLLER
+  // ==========================================================================
+  const promoModal = document.getElementById('promoDetailsModal');
+  const promoModalCloseBtn = document.getElementById('promoModalCloseBtn');
+  const promoModalContent = document.getElementById('promoModalDynamicContent');
+  const promoButtons = document.querySelectorAll('.promo-theme-btn');
+
+  const promoData = {
+    makhana: {
+      key: 'makhana',
+      themeClass: 'hero-makhana',
+      badge: 'Superfood Story',
+      title: 'MAKHANA',
+      description: "Makhana's are also popularly known as Popped Water Lily Seeds or Foxnuts . This amazing plant based snack is light, crunchy and power house of nutrition. India produces 90% of the world production of this superfood. The plant is cultivated for its seeds in lowland. The seeds are collected, dried, popped, roasted and sprinkled with our lip smacking flavours. Makhana's are an exceptional source of nutrients that strike an ideal balance between well-being and indulgence!",
+      stats: [
+        { val: '90%', label: 'World Production (India)' },
+        { val: 'Popped', label: 'Water Lily Seeds' },
+        { val: '100%', label: 'Plant-Based Snack' },
+        { val: 'High', label: 'Nutrient Balance' }
+      ]
+    },
+    jowar: {
+      key: 'jowar',
+      themeClass: 'hero-jowar',
+      badge: 'Superfood Story',
+      title: 'JOWAR PUFFS',
+      description: "Jowar also popularly known as Sorghum, an ancient grain touted as the fifth most popular cereal crop in the world. It is a nutrient-rich, plant-based protein source that is naturally gluten-free and high in antioxidants and also a good source fibre. Jowar's popularity can be linked as a natural substitute packed with nutrients. This ancient grain, a member of the millet family, is gaining popularity as people shift away from unhealthy products to conscious eating.",
+      stats: [
+        { val: '#5', label: 'World Cereal Crop' },
+        { val: '100%', label: 'Gluten-Free' },
+        { val: 'Rich', label: 'In Antioxidants & Fibre' },
+        { val: 'Ancient', label: 'Millet Grain' }
+      ]
+    }
+  };
+
+  function openPromoModal(type) {
+    const data = promoData[type] || promoData.makhana;
+    if (!promoModal || !promoModalContent) return;
+
+    promoModalContent.innerHTML = `
+      <div class="promo-modal-hero ${data.themeClass}">
+        <span class="promo-modal-badge"><i class="fa-solid fa-leaf"></i> ${data.badge}</span>
+        <h3 class="promo-modal-title" id="promoModalTitle">${data.title}</h3>
+      </div>
+
+      <div class="promo-modal-body">
+        <div class="promo-modal-desc-box">
+          <p class="promo-modal-desc-text">${data.description}</p>
+        </div>
+
+        <div class="promo-modal-grid">
+          ${data.stats.map(s => `
+            <div class="promo-modal-stat">
+              <span class="promo-stat-val">${s.val}</span>
+              <span class="promo-stat-label">${s.label}</span>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+
+    promoModal.classList.add('active');
+    promoModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePromoModal() {
+    if (!promoModal) return;
+    promoModal.classList.remove('active');
+    promoModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  promoButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const type = btn.getAttribute('data-promo') || 'makhana';
+      openPromoModal(type);
+    });
+  });
+
+  if (promoModalCloseBtn) {
+    promoModalCloseBtn.addEventListener('click', closePromoModal);
+  }
+
+  if (promoModal) {
+    promoModal.addEventListener('click', (e) => {
+      if (e.target === promoModal) {
+        closePromoModal();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && promoModal && promoModal.classList.contains('active')) {
+      closePromoModal();
+    }
+  });
+
+  // ==========================================================================
+  // 9. SHOP NAVIGATION DROPDOWN CONTROLLER (ZERO JERK & SMOOTH FILTERING)
+  // ==========================================================================
+  const shopDropdownWrapper = document.querySelector('.nav-dropdown-wrapper');
+  const shopDropdownBtn = document.getElementById('shopNavDropdownBtn');
+  const dropdownItems = document.querySelectorAll('.nav-dropdown-menu .dropdown-item');
+
+  if (shopDropdownWrapper && shopDropdownBtn) {
+    // Click toggle support (for touch / mobile)
+    shopDropdownBtn.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        shopDropdownWrapper.classList.toggle('open');
+      }
+    });
+
+    // Close on click outside
+    document.addEventListener('click', (e) => {
+      if (!shopDropdownWrapper.contains(e.target)) {
+        shopDropdownWrapper.classList.remove('open');
+      }
+    });
+
+    // When clicking any category in the dropdown
+    dropdownItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        const filterType = item.getAttribute('data-filter-select');
+        shopDropdownWrapper.classList.remove('open');
+
+        const catalog = document.querySelector('#catalogSection');
+        if (catalog) {
+          e.preventDefault();
+          if (window.lenis) {
+            window.lenis.scrollTo(catalog, { offset: -70 });
+          } else {
+            catalog.scrollIntoView({ behavior: 'smooth' });
+          }
+
+          if (filterType) {
+            // Instantly activate corresponding filter button
+            const targetFilterBtn = document.querySelector(`.filter-btn[data-filter="${filterType}"]`);
+            if (targetFilterBtn) {
+              targetFilterBtn.click();
+            }
+          }
+        }
+      });
+    });
+  }
+
+  // Check URL parameters on page load for cross-page dropdown navigation (e.g. from about.html)
+  const urlParams = new URLSearchParams(window.location.search);
+  const filterParam = urlParams.get('filter') || urlParams.get('category');
+  if (filterParam) {
+    setTimeout(() => {
+      const targetBtn = document.querySelector(`.filter-btn[data-filter="${filterParam}"]`);
+      if (targetBtn) {
+        targetBtn.click();
+      }
+      const catalog = document.querySelector('#catalogSection');
+      if (catalog) {
+        if (window.lenis) {
+          window.lenis.scrollTo(catalog, { offset: -70 });
+        } else {
+          catalog.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }, 350);
+  }
 });
 
 
