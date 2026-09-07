@@ -574,22 +574,74 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Mobile Menu Toggle
+  // ==========================================================================
+  // MOBILE NAVIGATION CONTROLLER (HAMBURGER & DROPDOWN ACCORDION)
+  // ==========================================================================
   const mobileToggle = document.querySelector('.mobile-toggle');
   const navLinks = document.querySelector('.nav-links');
+  const shopDropdownTrigger = document.querySelector('.nav-dropdown-trigger');
+  const shopDropdownWrapper = document.querySelector('.nav-dropdown-wrapper');
+
   if (mobileToggle && navLinks) {
-    mobileToggle.addEventListener('click', () => {
-      const isVisible = navLinks.style.display === 'flex';
-      navLinks.style.display = isVisible ? 'none' : 'flex';
-      navLinks.style.flexDirection = 'column';
-      navLinks.style.position = 'absolute';
-      navLinks.style.top = '100%';
-      navLinks.style.left = '0';
-      navLinks.style.width = '100%';
-      navLinks.style.background = '#FFFFFF';
-      navLinks.style.padding = '20px 24px';
-      navLinks.style.borderBottom = '1px solid var(--border-light)';
-      navLinks.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.08)';
+    mobileToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = navLinks.classList.toggle('mobile-active');
+      mobileToggle.classList.toggle('active', isOpen);
+
+      const icon = mobileToggle.querySelector('i');
+      if (icon) {
+        if (isOpen) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+        } else {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        }
+      }
+    });
+
+    // Mobile dropdown toggle for "Shop" submenu
+    if (shopDropdownTrigger && shopDropdownWrapper) {
+      shopDropdownTrigger.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          e.stopPropagation();
+          shopDropdownWrapper.classList.toggle('mobile-dropdown-open');
+          const chevron = shopDropdownTrigger.querySelector('.nav-chevron-icon');
+          if (chevron) {
+            chevron.style.transform = shopDropdownWrapper.classList.contains('mobile-dropdown-open')
+              ? 'rotate(180deg)'
+              : 'rotate(0deg)';
+          }
+        }
+      });
+    }
+
+    // Close menu when clicking regular links
+    navLinks.querySelectorAll('a:not(.nav-dropdown-trigger)').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('mobile-active');
+        mobileToggle.classList.remove('active');
+        const icon = mobileToggle.querySelector('i');
+        if (icon) {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        }
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navLinks.contains(e.target) && !mobileToggle.contains(e.target)) {
+        navLinks.classList.remove('mobile-active');
+        mobileToggle.classList.remove('active');
+        const icon = mobileToggle.querySelector('i');
+        if (icon) {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        }
+      }
     });
   }
 
