@@ -772,7 +772,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   // 9. SHOP NAVIGATION DROPDOWN CONTROLLER (ZERO JERK & SMOOTH FILTERING)
   // ==========================================================================
-  const shopDropdownWrapper = document.querySelector('.nav-dropdown-wrapper');
   const shopDropdownBtn = document.getElementById('shopNavDropdownBtn');
   const dropdownItems = document.querySelectorAll('.nav-dropdown-menu .dropdown-item');
 
